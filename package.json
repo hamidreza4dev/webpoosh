@@ -1,0 +1,25 @@
+{
+  "name": "new-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss dev/css/tailwind.css -o dist/css/styles.css",
+    "watch": "postcss dev/css/tailwind.css -o dist/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "prettier": "2.3.2",
+    "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
+    "postcss-100vh-fix": "^1.0.2",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2"
+  }
+}

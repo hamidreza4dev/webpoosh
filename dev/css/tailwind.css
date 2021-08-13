@@ -1,0 +1,272 @@
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/eot/iranyekanwebbold.eot');
+  src: url('../fonts/eot/iranyekanwebbold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/woff2/iranyekanwebbold.woff2') format('woff2'),
+    url('../fonts/woff/iranyekanwebbold.woff') format('woff'),
+    url('../fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+  src: url('../fonts/eot/iranyekanwebbold(fanum).eot');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/eot/iranyekanweblight.eot');
+  src: url('../fonts/eot/iranyekanweblight.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/woff2/iranyekanweblight.woff2') format('woff2'),
+    url('../fonts/woff/iranyekanweblight.woff') format('woff'),
+    url('../fonts/ttf/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/eot/iranyekanwebregular.eot');
+  src: url('../fonts/eot/iranyekanwebregular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/woff2/iranyekanwebregular.woff2') format('woff2'),
+    url('../fonts/woff/iranyekanwebregular.woff') format('woff'),
+    url('../fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/Farsi_numerals/eot/iranyekanwebbold(fanum).eot');
+  src: url('../fonts/Farsi_numerals/eot/iranyekanwebbold(fanum).eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/Farsi_numerals/woff2/iranyekanwebbold(fanum).woff2')
+      format('woff2'),
+    url('../fonts/Farsi_numerals/woff/iranyekanwebbold(fanum).woff')
+      format('woff'),
+    url('../fonts/Farsi_numerals/ttf/iranyekanwebbold(fanum).ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Farsi_numerals/eot/iranyekanweblight(fanum).eot');
+  src: url('../fonts/Farsi_numerals/eot/iranyekanweblight(fanum).eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/Farsi_numerals/woff2/iranyekanweblight(fanum).woff2')
+      format('woff2'),
+    url('../fonts/Farsi_numerals/woff/iranyekanweblight(fanum).woff')
+      format('woff'),
+    url('../fonts/Farsi_numerals/ttf/iranyekanweblight(fanum).ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Farsi_numerals/eot/iranyekanwebregular(fanum).eot');
+  src: url('../fonts/Farsi_numerals/eot/iranyekanwebregular(fanum).eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/Farsi_numerals/woff2/iranyekanwebregular(fanum).woff2')
+      format('woff2'),
+    url('../fonts/Farsi_numerals/woff/iranyekanwebregular(fanum).woff')
+      format('woff'),
+    url('../fonts/Farsi_numerals/ttf/iranyekanwebregular(fanum).ttf')
+      format('truetype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply outline-none border-none transition;
+  }
+
+  .btn.btn--lg {
+    @apply text-3xl leading-loose px-5 py-2;
+  }
+
+  .btn.btn--md {
+    @apply text-lg leading-relaxed px-5 py-2;
+  }
+
+  .btn.btn--xl {
+    @apply text-2xl leading-relaxed px-5 py-2;
+  }
+
+  .btn.btn--sm {
+    @apply text-2xs leading-8 px-5;
+  }
+
+  .btn--icon {
+    @apply flex gap-1.5 items-center;
+  }
+
+  .btn--primary {
+    @apply bg-gray-900 text-white hover:bg-gray-700;
+  }
+
+  .btn--secondary {
+    @apply text-gray-900 border-2 border-gray-900 border-solid hover:bg-gray-900 hover:text-white;
+  }
+
+  .btn--tertiary {
+    @apply bg-green-500 text-white hover:bg-green-700;
+  }
+
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply focus:ring-gray-900 focus:border-gray-900 transition duration-300;
+  }
+
+  label {
+    user-select: none;
+  }
+
+  select {
+    background-position: left 0.5rem center;
+    @apply pr-3 pl-10;
+  }
+
+  [type='checkbox'],
+  [type='radio'] {
+    @apply border-gray-300 text-gray-900 shadow-sm focus:border-gray-300 focus:ring-gray-900 transition;
+  }
+
+  .input--label {
+    @apply text-gray-900 mb-1 block;
+  }
+
+  input[type='range'] {
+    @apply appearance-none;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    @apply bg-gray-300 h-1.5 border-none rounded-sm;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    @apply appearance-none border-none h-4 w-4 rounded-full bg-gray-900 transform -translate-y-1;
+  }
+
+  input[type='range']:focus {
+    @apply outline-none;
+  }
+
+  input[type='range']:focus::-webkit-slider-runnable-track {
+    @apply bg-gray-400;
+  }
+
+  /*
+   * components
+  */
+
+  /* accordion */
+  .accordion-btn {
+    @apply w-full rounded-md bg-gray-100 transition p-3 text-right;
+  }
+
+  .accordion-btn * {
+    @apply transition-all duration-300;
+  }
+
+  .accordion-btn.active {
+    @apply bg-gray-300;
+  }
+
+  .accordion-btn.active * {
+    transform: rotate(-180deg);
+  }
+
+  .acc-panel {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* badge */
+  .badge {
+    @apply bg-red-500 py-1 px-2 rounded-lg text-white mr-2;
+  }
+
+  .badge-rounded {
+    @apply bg-red-500 p-0.5 w-5 h-5 rounded-full text-white absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2;
+  }
+
+  .badge-number {
+    @apply bg-red-500 py-1 px-2 rounded-lg text-white absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2;
+  }
+
+  /* breadcrumb */
+  .breadcrumb {
+    @apply flex items-center gap-1;
+  }
+
+  .breadcrumb-icon {
+    @apply mt-auto;
+  }
+
+  /* pagination */
+  .pagination {
+    @apply flex items-center;
+  }
+
+  .pagination li {
+    @apply border-gray-600 border border-solid hover:bg-gray-200 text-center w-12;
+    margin-left: -1px;
+  }
+
+  .pagination li:first-child {
+    @apply rounded-r-lg;
+  }
+
+  .pagination li:last-child {
+    @apply rounded-l-lg;
+  }
+
+  .pagination li.active {
+    @apply ring-2 ring-gray-600 transition duration-300 bg-gray-900 text-white z-10;
+  }
+
+  .pagination li a {
+    @apply text-base p-2 inline-block;
+  }
+
+  /* Modal */
+  .modal {
+    @apply bg-white shadow-xl rounded-lg p-4 fixed z-30 pointer-events-none transform -translate-y-1/2 translate-x-1/2 scale-0 top-2/4 right-2/4 origin-center transition-transform duration-200 ease-in-out;
+  }
+
+  .modal.active {
+    @apply -translate-y-1/2 translate-x-1/2 scale-100 pointer-events-auto;
+  }
+
+  .overlay {
+    @apply fixed top-0 right-0 h-screen w-screen bg-gray-900 bg-opacity-60 z-20 pointer-events-none backdrop-filter backdrop-blur-sm opacity-0 transition-opacity;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .overlay.active {
+    @apply opacity-100 pointer-events-auto;
+  }
+}
