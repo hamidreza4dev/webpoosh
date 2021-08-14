@@ -84,6 +84,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* My Custom Components */
 @layer components {
   .btn {
     @apply outline-none border-none transition;
@@ -113,12 +114,27 @@
     @apply bg-gray-900 text-white hover:bg-gray-700;
   }
 
+  .btn--primary:focus,
+  .btn--primary.active {
+    @apply ring-4 ring-gray-300 transition duration-300 bg-gray-700 text-white z-10;
+  }
+
   .btn--secondary {
     @apply text-gray-900 border-2 border-gray-900 border-solid hover:bg-gray-900 hover:text-white;
   }
 
+  .btn--secondary:focus,
+  .btn--secondary.active {
+    @apply ring-4 ring-gray-400 transition duration-300 bg-gray-900 text-white z-10;
+  }
+
   .btn--tertiary {
-    @apply bg-green-500 text-white hover:bg-green-700;
+    @apply bg-green-500 text-white hover:bg-green-600;
+  }
+
+  .btn--tertiary:focus,
+  .btn--tertiary.active {
+    @apply ring-4 ring-green-300 transition duration-300 bg-green-600 text-white z-10;
   }
 
   [type='text'],
@@ -183,15 +199,10 @@
 
   /* accordion */
   .accordion-btn {
-    @apply w-full rounded-md bg-gray-100 transition p-3 text-right;
   }
 
   .accordion-btn * {
     @apply transition-all duration-300;
-  }
-
-  .accordion-btn.active {
-    @apply bg-gray-300;
   }
 
   .accordion-btn.active * {
@@ -231,12 +242,11 @@
   }
 
   .pagination li {
-    @apply border-gray-600 border border-solid hover:bg-gray-200 text-center w-12;
-    margin-left: -1px;
+    @apply border-gray-600 border-l border-t border-b border-solid hover:bg-gray-200 text-center w-12;
   }
 
   .pagination li:first-child {
-    @apply rounded-r-lg;
+    @apply rounded-r-lg border-r;
   }
 
   .pagination li:last-child {
@@ -244,7 +254,7 @@
   }
 
   .pagination li.active {
-    @apply ring-2 ring-gray-600 transition duration-300 bg-gray-900 text-white z-10;
+    @apply btn btn--sm btn--secondary px-0;
   }
 
   .pagination li a {
@@ -268,5 +278,24 @@
 
   .overlay.active {
     @apply opacity-100 pointer-events-auto;
+  }
+
+  /* tab navigation */
+  .tab-item {
+    @apply hidden animate-fade-in-down;
+  }
+
+  .tab-item.active {
+    @apply block;
+  }
+}
+
+/* Global Site Components */
+@layer components {
+}
+
+@media only screen and (min-width: 1279px) {
+  .container {
+    max-width: 1535px;
   }
 }
