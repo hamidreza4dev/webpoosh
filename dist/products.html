@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>محصولات</title>
+  <!-- line awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css">
+  <!-- styles css -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-farsi">
+  <div class="overlay"></div>
+  <div class="hover-overlay"></div>
+
+  <!-- login modal -->
+  <div class="modal tab-navigation w-1/4 xl:w-2/6 lg:w-2/4 md:w-5/6" id="userAccountModal">
+    <button class="close-modal-btn"><i class="fa fa-times"></i></button>
+
+    <div class="tabs flex">
+      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2 active">ورود</button>
+      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2">ثبت نام</button>
+    </div>
+
+    <div class="pt-8">
+      <div class="tab-item active">
+        <form>
+          <label class="block mb-4">
+            <span class="input--label">شماره تلفن همران</span>
+            <input type="email" class="form-input mt-1 block w-full text-left" style="direction: ltr" placeholder="۹۱۲ ۰۰۰ ۰۰۰۰">
+          </label>
+
+          <label class="block mb-4">
+            <span class="input--label">رمز عبور</span>
+            <input type="password" style="direction: ltr" class="form-input mt-1 block w-full">
+          </label>
+
+          <a href="#" class="text-blue-500 inline-block">رمز عبور خود را فراموش کرده ام</a>
+          <hr class="my-4"/>
+          <button type="submit" class="btn btn--md btn--primary block w-full">ورود</button>
+        </form>
+      </div>
+
+      <div class="tab-item">
+        <form>
+          <label class="block mb-4">
+            <span class="input--label">شماره تلفن همران</span>
+            <input type="email" class="form-input mt-1 block w-full text-left" style="direction: ltr" placeholder="۹۱۲ ۰۰۰ ۰۰۰۰">
+          </label>
+          <hr class="my-4"/>
+          <button type="submit" class="btn btn--md btn--primary block w-full">ثبت نام</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col" id="navigation">
+    <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
+      <span>ارسال رایگان برای سفارش های بالای 500 هزار تومان <a href="#" class="underline" target="_blank">مشاهده جزئیات</a></span>
+    </div>
+
+    <nav class="flex justify-between items-center container">
+      <div class="hidden md:block" data-modal="mobileMenu" onclick="showModal(event)">
+        <span class="text-3xl pointer-events-none"><i class="fa fa-bars"></i></span>
+      </div>
+
+      <div class="flex items-center">
+        <a href="#" class="mx-5 p-2 inline-block xl:px-0 xl:mx-0 md:h-16 md:py-4">
+          <img src="assets/site/wp-logo.png" alt="site-logo" class="h-full">
+        </a>
+
+        <ul class="flex items-center md:hidden">
+          <li class="navigation-item"><a href="#">ست</a></li>
+          <li class="navigation-item"><a href="#">لباس</a></li>
+          <li class="navigation-item"><a href="#">کفش</a></li>
+          <li class="navigation-item"><a href="#">اکسسوری</a></li>
+          <li class="navigation-item"><a href="#">تخفیف ها</a></li>
+          <li class="navigation-item"><a href="#">فروشگاه حضوری</a></li>
+        </ul>
+
+        <div class="mobile-menu xs:px-4 pt-16 hidden md:block select-none" id="mobileMenu">
+          <div class="flex items-center close-modal-btn gap-2 right-7 xs:right-3">
+            <button class="flex items-center pointer-events-none"><i class="fa fa-times"></i></button>
+            <span class="pointer-events-none text-base">بستن منو</span>
+          </div>
+          <ul class="space-y-6">
+            <div class="space-y-2">
+              <li class="flex border-solid border border-gray-900">
+                <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
+                <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
+              </li>
+
+              <li class="cursor-pointer flex items-center gap-2 group btn btn-md btn--primary p-2">
+                <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+                <span class="pointer-events-none">ثبت نام / ورود</span>
+              </li>
+            </div>
+            <li class=""><a href="#">لباس</a></li>
+            <li class=""><a href="#">کفش</a></li>
+            <li class="">
+              <button class="btn--icon justify-between accordion-btn w-full">اکسسوری<i class="fa fa-angle-down"></i></button>
+              <div class="acc-panel transition-all">
+                <ul class="pr-4 space-y-6 py-2 mt-4 bg-gray-100">
+                  <li class=""><a href="#">لباس</a></li>
+                  <li class=""><a href="#">کفش</a></li>
+                  <li class=""><a href="#">تخفیف ها</a></li>
+                  <li class=""><a href="#">فروشگاه حضوری</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class=""><a href="#">تخفیف ها</a></li>
+            <li class=""><a href="#">فروشگاه حضوری</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex">
+        <span class="nav-action md:hidden group">
+          <span class="text-3xl xl:text-2xl"><i class="fa fa-search"></i></span>
+
+          <div class="nav-drop-down group-hover:block">
+            <div class="flex border-solid border border-gray-900">
+              <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
+              <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
+            </div>
+          </div>
+        </span>
+
+        <div class="nav-action md:hidden group">
+          <span class="text-3xl xl:text-2xl"><i class="fa fa-user"></i></span>
+
+          <div class="nav-drop-down group-hover:block">
+            <ul>
+              <li class="cursor-pointer flex items-center gap-2" data-modal="userAccountModal" onclick="showModal(event)">
+                <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+                <span class="pointer-events-none">ثبت نام / ورود</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-action group">
+          <span class="text-3xl xl:text-2xl"><i class="fa fa-shopping-bag"></i></span>
+
+          <div class="nav-drop-down group-hover:flex flex-col md:group-hover:hidden">
+            <h1 class="text-xl font-bold">سبد خرید</h1>
+            <a href="" class="btn btn--md btn--tertiary flex-auto mt-4">جزئیات سبد خرید</a>
+            <p class="border-t border-b border-solid border-gray-400 py-8 my-12 text-center">سبد خرید شما خالیست !</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="breadcrumb bg-gray-100 w-full p-3 container">
+    <li class="text-sm transition-colors hover:text-gray-500"><a href="#">وب پوش</a></li><i class="breadcrumb-icon fa fa-angle-left"></i>
+    <li class="text-sm transition-colors hover:text-gray-500"><a href="#">محصولات</a></li><i class="breadcrumb-icon fa fa-angle-left"></i>
+    <li class="text-sm"><a>پیراهن</a></li>
+  </ul>
+
+  <main class="container px-0 mt-12 flex main-products 2xl:px-4">
+    <div class="w-1/6 ml-16 xl:ml-4 md:w-3/12 sm:hidden">
+      <div class="bg-gray-50"> <!--inner-->
+        <div>
+          <button class="btn--icon justify-between accordion-btn w-full py-4 px-4 bg-gray-100 hover:bg-gray-200 text-sm">دکمه تستی<i class="fa fa-angle-down"></i></button>
+          <div class="acc-panel transition-all">
+            <ul class="py-2 px-5 lg:text-sm">
+              <li class="py-2 font-bold"><a href="#">پیراهن</a></li>
+              <li class="py-2"><a href="#">کت تک</a></li>
+              <li class="py-2"><a href="#">شلوار کتان</a></li>
+              <li class="py-2"><a href="#">تیشرت آستین بلند</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn--icon justify-between accordion-btn w-full py-4 px-4 bg-gray-100 hover:bg-gray-200 text-sm">به ترتیب<i class="fa fa-angle-down"></i></button>
+          <div class="acc-panel transition-all">
+            <div class="py-2 px-5 flex flex-col lg:text-sm">
+              <label class="inline-flex py-2 items-center">
+                <input type="radio" name="sorting" checked="">
+                <span class="mr-2">جدیدترین</span>
+              </label>
+
+              <label class="inline-flex py-2 items-center">
+                <input type="radio" name="sorting">
+                <span class="mr-2">ارزان ترین</span>
+              </label>
+
+              <label class="inline-flex py-2 items-center">
+                <input type="radio" name="sorting">
+                <span class="mr-2">گران ترین</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn--icon justify-between accordion-btn w-full py-4 px-4 bg-gray-100 hover:bg-gray-200 text-sm">سایز<i class="fa fa-angle-down"></i></button>
+          <div class="acc-panel transition-all cloth-filter">
+            <div class="py-2 px-5 flex flex-wrap gap-y-2 lg:text-sm">
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>25</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>26</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>27</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>28</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>29</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>30</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>31</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>M</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>S</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>Xl</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>2Xl</span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="type-clothe" />
+                <span>3Xl</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-5/6 md:w-9/12 sm:w-full">
+      <div>
+        <h1 class="text-base">پیراهن مردانه</h1>
+        <hr class="mt-4 mb-6"/>
+
+        <div class="grid grid-cols-4 gap-4 xl:grid-cols-3 xs:grid-cols-2">
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-1--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-1--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-2--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-2--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-3--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-3--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-4--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-4--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-1--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-1--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-2--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-2--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-3--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-3--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-4--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-4--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-1--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-1--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-2--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-2--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-3--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-3--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="product-item"> <!--product inner-->
+              <a href="#" class="product-image">
+                <img src="assets/img/shirt/shirt-4--1.jpg" alt=""/>
+                <img class="product-image-hover-state" src="assets/img/shirt/shirt-4--2.jpg" alt=""/>
+
+                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                  <span>مشاهده سریع &nbsp;</span>
+                  <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
+                </button>
+              </a>
+              <div class="product-content">
+                <a href="#" class="product-title">پیراهن مردانه 23219</a>
+                <p class="product-price">377,000 تومان</p>
+                <div class="product-colors">
+                  <img src="assets/img/shirt/shirt-color-1.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-2.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-3.jpg" alt="" />
+                  <img src="assets/img/shirt/shirt-color-4.jpg" alt="" />
+                </div>
+                <div class="product-sizes">
+                  <span>M</span>
+                  <span>L</span>
+                  <span>XL</span>
+                  <span>2XL</span>
+                  <span>3Xl</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            با شنیدن پوشاک مردانه یکی از اولین گزینه هایی که به ذهن هرکس می
+            رسد پیراهن مردانه است. پیراهن های مردانه همیشه یک عضو جدا نشدنی در
+            کمد لباس هر مرد بوده و دوستی نزدیکی با هر مرد شیک پوش داشته
+            است.بهترین پیراهن مردانه علاوه بر یک ظاهر عالی راحتی را برای ما
+            فراهم می کند. برای مثال پیراهن های نخی در فصل های گرم و پیراهن های
+            کتان و جین در فصل های سرد کمک زیادی به ما می کنند.این محصولات با
+            داشتن تنوع در نوع، طرح و رنگ بندی برای هر نوع تیپ مناسب می باشد.
+          </p>
+          <h1 class="mb-2">انواع پیراهن و بلوز مردانه</h1>
+          <p>
+            شما می توانید انواع پیراهن مردانه نظیر: پیراهن نخی، کتان، جین و...
+            را در طرح ها و انواع متنوع در فروشگاه اینترنتی وب پوش انتخاب کنید.
+          </p>
+          <h1 class="mb-2">پیراهن مجلسی و رسمی مردانه</h1>
+          <p>
+            وقتی صحبت از یک جنتلمن می شود ویژگی های زیادی متصور می شویم. شاید
+            یکی از این ویژگی ها یک تیپ شیک و رسمی شامل: کت، شلوار پارچه ای یا
+            کتان و از همه مهمتر یک پیراهن مردانه مجلسی یا رسمی می باشد که اغلب
+            به رنگ های ساده نظیر سفید، مشکی یا سرمه ای هستند و برای ملاقات های
+            رسمی و مجالس و مهمانی ها مورد استفاده می باشد.
+          </p>
+          <h1 class="mb-2">پیراهن مردانه آستین کوتاه</h1>
+          <p>
+            حتی تصور پوشیدن پیراهن آستین بلند در گرمای تابستان برای ما مرد ها
+            آزار دهنده است.اما این دوست عزیز همیشه همراه ما می ماند. پیراهن
+            های نخی آستین کوتاه به ما کمک می کند که انواع تیپ های ممکن رو در
+            عین راحتی و خنکی داشته باشیم.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-orange-500 py-8 text-white">
+    <div class="footer-inner container">
+      <div class="footer-images  lg:order-1">
+        <img src="assets/site/logo_2.svg" alt="" />
+        <img src="assets/site/enamad.png" alt="" />
+      </div>
+
+      <div class="footer-links lg:order-4">
+        <h6 class="footer-title">راهنمای خرید</h6>
+        <ul>
+          <li><a class="footer-link-item" href="#">راهنمای انتخاب سایز</a></li>
+          <li><a class="footer-link-item" href="#">روش ارسال</a></li>
+          <li><a class="footer-link-item" href="#">روش پرداخت</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links lg:order-3">
+        <h6 class="footer-title">راهنمای خرید</h6>
+        <ul>
+          <li><a class="footer-link-item" href="#">راهنمای انتخاب سایز</a></li>
+          <li><a class="footer-link-item" href="#">روش ارسال</a></li>
+          <li><a class="footer-link-item" href="#">روش پرداخت</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links lg:order-5">
+        <h6 class="footer-title">راهنمای خرید</h6>
+        <ul>
+          <li><a class="footer-link-item" href="#">راهنمای انتخاب سایز</a></li>
+          <li><a class="footer-link-item" href="#">روش ارسال</a></li>
+          <li><a class="footer-link-item" href="#">روش ارسال</a></li>
+        </ul>
+      </div>
+
+      <div class="join-blog lg:order-2 sm:flex sm:flex-col sm:items-center">
+        <h6 class="footer-title">ثبت ایمیل در خبرنامه</h6>
+
+        <div class="flex border-solid border border-gray-900">
+          <input type="text" class="border-0 flex-auto focus:ring-0 text-gray-900" placeholder="آدرس ایمیل شما">
+          <button class="btn--primary transition text-white px-8">ثبت</button>
+        </div>
+
+        <p class="mt-4">از جدیدترین محصولات و تخفیف‌ها با خبر شوید</p>
+
+        <div class="footer-social">
+          <p class="font-bold">ما را در شبکه‌های اجتماعی دنبال کنید</p>
+          <ul>
+            <li class="social-item">
+              <a href="https://www.instagram.com/webpoosh/" target="_blank">
+                <i class="fab fa-instagram icon"></i>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://t.me/webpoosh" target="_blank">
+                <i class="fab fa-telegram-plane icon"></i>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://www.facebook.com/webpoosh/" target="_blank">
+                <i class="fab fa-facebook-square icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4 container">
+    <div class="footer-info container">
+      <ul>
+        <li><a href="#">وبلاگ</a></li>
+        &nbsp;|&nbsp;
+        <li><a href="#">پیراهن</a></li>
+        &nbsp;|&nbsp;
+        <li><a href="#">پولوشرت</a></li>
+        &nbsp;|&nbsp;
+        <li><a href="#">تیشرت</a></li>
+        &nbsp;|&nbsp;
+        <li><a href="#">شلوار جین</a></li>
+      </ul>
+      <div class="footer-copyright">
+        <span>کلیه حقوق مادی و معنوی این سایت متعلق به فروشگاه وب‌پوش می‌باشد</span>
+        <span>webpoosh.com - 2021 © Copyright</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

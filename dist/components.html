@@ -184,7 +184,7 @@
   <div>
     <h1 class="text-3xl m-2 mb-6 bg-gray-100 p-3 py-4 rounded-md">مودال</h1>
     <div class="mt-16 mx-auto">
-      <button class="btn btn--primary btn--md" data-modal="testModal" onclick="showModal(event)">نمایش مودال ۱</button>
+      <button class="btn btn--primary btn--md block mx-auto" data-modal="testModal" onclick="showModal(event)">نمایش مودال ۱</button>
       <div class="modal" id="testModal">
         <button class="close-modal-btn"><i class="fa fa-times"></i></button>
         <h1 class="text-xl xl:font-bold">عنوان مودال من !!</h1>
@@ -312,78 +312,7 @@
     </div>
   </div>
 
-  <script>
-    // components
-
-    /* accordion */
-    const accordion = document.querySelectorAll('.accordion-btn');
-    if (accordion.length) {
-      console.log('check exist')
-      for (let i = 0; i < accordion.length; i++) {
-        accordion[i].addEventListener('click', () => {
-          accordion[i].classList.toggle('active');
-          const panel = accordion[i].nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + 'px';
-          }
-        });
-      }
-    }
-
-    /* modal */
-    const overlay = document.querySelector('.overlay');
-    function showModal(event) {
-      const targetModal = event.target.getAttribute('data-modal');
-      const targetModalEl = document.getElementById(targetModal);
-
-      // toggle modal
-      overlay.classList.add('active');
-      targetModalEl.classList.add('active');
-
-      // close btn
-      const closeModalBtn = targetModalEl.querySelector('.close-modal-btn');
-      closeModalBtn.addEventListener('click', closeModal, { once: true });
-      overlay.addEventListener('click', closeModal, { once: true });
-
-      // Escape Kay
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
-          closeModal();
-        }
-      }, { once: true });
-
-      // toggle modal options
-      function closeModal() {
-        overlay.classList.remove('active');
-        targetModalEl.classList.remove('active');
-      }
-    }
-
-    /* tab navigation */
-    const tabNavigation = document.querySelectorAll('.tab-navigation');
-    if (tabNavigation.length) {
-      console.log('check exist')
-      for (let i = 0; i < tabNavigation.length; i++) {
-        const tabBtn = tabNavigation[i].querySelectorAll('.tab-btn');
-        const tabItem = tabNavigation[i].querySelectorAll('.tab-item');
-
-        for (let j = 0; j < tabBtn.length; j++) {
-          tabBtn[j].addEventListener('click', () => {
-            for (let k = 0; k < tabItem.length; k++) {
-              tabItem[k].classList.remove('active');
-            }
-            for (let k = 0; k < tabBtn.length; k++) {
-              tabBtn[k].classList.remove('active');
-            }
-            tabBtn[j].classList.add('active');
-            tabItem[j].classList.add('active');
-          });
-        }
-      }
-    }
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

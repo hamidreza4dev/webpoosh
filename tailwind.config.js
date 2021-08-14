@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -10,6 +12,9 @@ module.exports = {
     },
 
     extend: {
+      colors: {
+        orange: colors.orange,
+      },
       fontFamily: {
         farsi: ['"iranyekan"'],
       },
@@ -91,7 +96,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ['group-hover'],
+      ringWidth: ['focus'],
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };
