@@ -58,10 +58,10 @@
   </div>
 
   <!-- product modal -->
-  <div class="modal product-modal product-swiper" id="productModal">
-    <div class="flex">
-      <div class="close-modal-btn right-8 top-2"><i class="fa fa-times"></i></div>
-      <div class="swiper-container gallery-thumbs">
+  <div class="modal product-modal product-swiper lg:w-screen lg:h-screen lg:overflow-y-scroll" id="productModal">
+    <div class="flex lg:grid lg:grid-cols-[70vh 1fr 0fr]">
+      <div class="close-modal-btn right-8 top-2 z-10"><i class="fa fa-times"></i></div>
+      <div class="swiper-container gallery-thumbs lg:hidden">
         <div class="swiper-wrapper" style="align-items: center">
           <div class="swiper-slide">
             <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
@@ -78,8 +78,8 @@
         </div>
       </div>
 
-      <div class="swiper-container gallery-top">
-        <div class="swiper-wrapper">
+      <div class="swiper-container gallery-top lg:w-full">
+        <div class="swiper-wrapper lg:h-[600px]">
           <div class="swiper-slide">
             <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
           </div>
@@ -197,6 +197,7 @@
     </div>
   </div>
 
+  <!-- navigation -->
   <div class="flex flex-col relative flex flex-col" id="navigation">
     <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
       <span>ارسال رایگان برای سفارش های بالای 500 هزار تومان <a href="#" class="underline" target="_blank">مشاهده جزئیات</a></span>
@@ -321,6 +322,7 @@
     <li class="text-sm"><a>پیراهن</a></li>
   </ul>
 
+  <!-- main -->
   <main class="container px-0 mt-12 flex main-products 2xl:px-4">
     <div class="w-1/6 ml-16 xl:ml-4 md:w-3/12 sm:hidden">
       <div class="bg-gray-50"> <!--inner-->
@@ -841,6 +843,7 @@
     </div>
   </main>
 
+  <!-- footer -->
   <footer class="bg-orange-500 py-8 text-white">
     <div class="footer-inner container">
       <div class="footer-images  lg:order-1">

@@ -549,10 +549,10 @@
 
     .swiper-container {
       &.gallery-top {
-        width: 35vw;
+        @media only screen and (min-width: 1024px) {
+          width: 35vw;
+        }
       }
-
-      height: 100%;
     }
 
     .swiper-slide {

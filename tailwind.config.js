@@ -6,6 +6,7 @@ module.exports = {
     './dist/components.html',
     './dist/index.html',
     './dist/products.html',
+    './dist/cart.html',
     './dist/js/script.js',
   ],
   darkMode: false, // or 'media' or 'class'
@@ -78,6 +79,10 @@ module.exports = {
         'fade-out-down': 'fade-out-down 0.5s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out',
         'fade-out-up': 'fade-out-up 0.5s ease-out',
+      },
+
+      gridTemplateColumns: {
+        'min-col': '0fr 1fr',
       },
     },
 

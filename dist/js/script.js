@@ -186,12 +186,16 @@ const productModalContentInner = document.querySelector(
   '.modal.product-modal .product-content-inner'
 );
 if (productModalContentInner) {
-  productModalContentInner.style.height =
-    productModalContentInner.offsetHeight + 'px';
+  if (window.innerWidth > 1024) {
+    productModalContentInner.style.height =
+      productModalContentInner.offsetHeight + 'px';
+
+    document.querySelector('.modal.product-modal .gallery-top').style.width =
+      (screen.height / 2) * 1.2 + 'px';
+  }
+
   productModalContentInner.style.padding = '30px';
   productModalContentInner.style.flexGrow = '1';
-  document.querySelector('.modal.product-modal .gallery-top').style.width =
-    (screen.height / 2) * 1.2 + 'px';
 }
 
 // swiepr config

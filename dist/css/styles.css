@@ -2309,14 +2309,12 @@ footer .footer-info .footer-copyright {
   padding: 0px;
 }
 
+@media only screen and (min-width: 1024px) {
+
 .product-modal .swiper-container.gallery-top {
-        width: 35vw;
+          width: 35vw
       }
-
-.product-modal .swiper-container {
-
-      height: 100%;
-}
+        }
 
 .product-modal .swiper-slide {
       display: flex;
@@ -2569,6 +2567,18 @@ footer .footer-info .footer-copyright {
   right: 1.75rem;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -2657,6 +2667,10 @@ footer .footer-info .footer-copyright {
   margin-bottom: 0.5rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -2709,8 +2723,16 @@ footer .footer-info .footer-copyright {
   width: 83.333333%;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 @keyframes fade-in-down {
@@ -2839,6 +2861,10 @@ footer .footer-info .footer-copyright {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-min-col {
+  grid-template-columns: 0fr 1fr;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -2875,6 +2901,18 @@ footer .footer-info .footer-copyright {
   gap: 1rem;
 }
 
+.gap-40 {
+  gap: 10rem;
+}
+
+.gap-0\.5 {
+  gap: 0.125rem;
+}
+
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-y-2 {
   row-gap: 0.5rem;
 }
@@ -2905,11 +2943,6 @@ footer .footer-info .footer-copyright {
 
 .divide-solid > :not([hidden]) ~ :not([hidden]) {
   border-style: solid;
-}
-
-.divide-gray-500 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: rgba(107, 114, 128, var(--tw-divide-opacity));
 }
 
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
@@ -3025,6 +3058,10 @@ footer .footer-info .footer-copyright {
   padding: 0px;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -3063,6 +3100,16 @@ footer .footer-info .footer-copyright {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-96 {
@@ -3211,16 +3258,6 @@ footer .footer-info .footer-copyright {
   text-decoration: underline;
 }
 
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -3301,6 +3338,10 @@ footer .footer-info .footer-copyright {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .xl\:gap-20 {
+    gap: 5rem;
+  }
+
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -3338,12 +3379,80 @@ footer .footer-info .footer-copyright {
     order: 2;
   }
 
+  .lg\:grid {
+    display: grid;
+  }
+
   .lg\:hidden {
     display: none;
   }
 
+  .lg\:h-screen {
+    height: 100vh;
+  }
+
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:h-3\/5 {
+    height: 60%;
+  }
+
+  .lg\:h-14 {
+    height: 3.5rem;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
+  }
+
+  .lg\:h-\[900\] {
+    height: 900;
+  }
+
+  .lg\:h-\[300px\] {
+    height: 300px;
+  }
+
+  .lg\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:w-2\/4 {
     width: 50%;
+  }
+
+  .lg\:w-screen {
+    width: 100vw;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
+  .lg\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .lg\:overflow-y-scroll {
+    overflow-y: scroll;
   }
 
   .lg\:text-sm {
