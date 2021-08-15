@@ -7,10 +7,12 @@
   <title>محصولات</title>
   <!-- line awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css">
+  <!-- swiepr js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.min.css">
   <!-- styles css -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-farsi">
+<body class="font-farsi overflow-x-hidden">
   <div class="overlay"></div>
   <div class="hover-overlay"></div>
 
@@ -19,8 +21,8 @@
     <button class="close-modal-btn"><i class="fa fa-times"></i></button>
 
     <div class="tabs flex">
-      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2 active">ورود</button>
-      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2">ثبت نام</button>
+      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2 xs:btn--sm active">ورود</button>
+      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2 xs:btn--sm">ثبت نام</button>
     </div>
 
     <div class="pt-8">
@@ -38,7 +40,7 @@
 
           <a href="#" class="text-blue-500 inline-block">رمز عبور خود را فراموش کرده ام</a>
           <hr class="my-4"/>
-          <button type="submit" class="btn btn--md btn--primary block w-full">ورود</button>
+          <button type="submit" class="btn btn--md btn--primary block w-full xs:btn--sm">ورود</button>
         </form>
       </div>
 
@@ -55,67 +57,226 @@
     </div>
   </div>
 
-  <div class="flex flex-col" id="navigation">
+  <!-- product modal -->
+  <div class="modal product-modal product-swiper" id="productModal">
+    <div class="flex">
+      <div class="close-modal-btn right-8 top-2"><i class="fa fa-times"></i></div>
+      <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper" style="align-items: center">
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="slide 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="slide 3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--4.jpg" alt="slide 4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="slide 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="slide 3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/shirt/shirt-2--2--modal--4.jpg" alt="slide 4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="product-content-inner overflow-y-scroll">
+          <h1 class="text-xl font-bold">پیراهن ساده مردانه 21204</h1>
+          <p class="text-2xs my-4">387,000 تومان</p>
+          <hr />
+          <p class="mt-4 text-xs">رنگ انتخاب شده : <span class="font-bold">سرمه ای</span></p>
+          <div class="selected-color">
+            <label>
+              <input type="radio" name="modal-selected-color">
+              <img src="assets/img/shirt/shirt-color-1.jpg" alt=""/>
+            </label>
+
+            <label>
+              <input type="radio" name="modal-selected-color">
+              <img src="assets/img/shirt/shirt-color-2.jpg" alt=""/>
+            </label>
+
+            <label>
+              <input type="radio" name="modal-selected-color">
+              <img src="assets/img/shirt/shirt-color-3.jpg" alt=""/>
+            </label>
+
+            <label>
+              <input type="radio" name="modal-selected-color">
+              <img src="assets/img/shirt/shirt-color-4.jpg" alt=""/>
+            </label>
+
+          </div>
+
+          <div class="modal-product-size flex my-4">
+            <label>
+              <input type="radio" name="type-clothe" disabled />
+              <span>M</span>
+            </label>
+
+            <label>
+              <input type="radio" name="type-clothe" />
+              <span>S</span>
+            </label>
+
+            <label>
+              <input type="radio" name="type-clothe" />
+              <span>Xl</span>
+            </label>
+
+            <label>
+              <input type="radio" name="type-clothe" disabled />
+              <span>2Xl</span>
+            </label>
+
+            <label>
+              <input type="radio" name="type-clothe" />
+              <span>3Xl</span>
+            </label>
+          </div>
+          <button class="text-blue-500 underline text-sm"><i class="fa fa-ruler text-xl text-gray-900"></i>راهنمای سایز</button>
+          <hr class="mt-6"/>
+          <div>
+            <button class="accordion-btn btn w-full inline-block flex justify-between p-4 py-8">لباس<i class="fa fa-angle-down"></i></button>
+            <div class="acc-panel transition-all">
+              <div class="p-6 pt-2 text-2xs">
+                <p>پیراهن آستین بلند مردانه، دارای یقه معمولی</p>
+
+                <p>
+                  مدل با قد 185 سانتی‌متر و وزن 75 کیلوگرم سایز M را پوشیده است
+                </p>
+                <p>
+                  با توجه به تفاوت نمایش رنگ‌ها در صفحه نمایش دستگاه‌های مختلف،
+                  رنگ محصولات در تصویر تا 20% با واقعیت متفاوت خواهد بود
+                </p>
+
+                <p>پیراهن آستین بلند مردانه، دارای یقه معمولی</p>
+
+                <p>
+                  مدل با قد 185 سانتی‌متر و وزن 75 کیلوگرم سایز M را پوشیده است
+                </p>
+                <p>
+                  با توجه به تفاوت نمایش رنگ‌ها در صفحه نمایش دستگاه‌های مختلف،
+                  رنگ محصولات در تصویر تا 20% با واقعیت متفاوت خواهد بود
+                </p>
+
+                <p>پیراهن آستین بلند مردانه، دارای یقه معمولی</p>
+
+                <p>
+                  مدل با قد 185 سانتی‌متر و وزن 75 کیلوگرم سایز M را پوشیده است
+                </p>
+                <p>
+                  با توجه به تفاوت نمایش رنگ‌ها در صفحه نمایش دستگاه‌های مختلف،
+                  رنگ محصولات در تصویر تا 20% با واقعیت متفاوت خواهد بود
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4"/>
+          <a href="#" class="my-4 w-full btn btn--md btn--secondary">مشاهده تمامی اطلاعات محصول</a>
+        </div>
+
+        <a href="#" class="btn btn--md btn--tertiary w-full inline-block">افزودن به سبد خرید</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col relative flex flex-col" id="navigation">
     <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
       <span>ارسال رایگان برای سفارش های بالای 500 هزار تومان <a href="#" class="underline" target="_blank">مشاهده جزئیات</a></span>
     </div>
 
-    <nav class="flex justify-between items-center container">
-      <div class="hidden md:block" data-modal="mobileMenu" onclick="showModal(event)">
-        <span class="text-3xl pointer-events-none"><i class="fa fa-bars"></i></span>
-      </div>
+    <nav class="self-center w-full">
+      <div class="flex justify-between items-center container">
+        <div class="hidden md:block" data-modal="mobileMenu" onclick="showModal(event)">
+          <span class="text-3xl pointer-events-none"><i class="fa fa-bars"></i></span>
+        </div>
 
-      <div class="flex items-center">
-        <a href="#" class="mx-5 p-2 inline-block xl:px-0 xl:mx-0 md:h-16 md:py-4">
-          <img src="assets/site/wp-logo.png" alt="site-logo" class="h-full">
-        </a>
+        <div class="flex">
+          <a href="#" class="mx-5 p-2 inline-block xl:px-0 xl:mx-0 md:h-16 md:py-4">
+            <img src="assets/site/wp-logo.png" alt="site-logo" class="h-full">
+          </a>
 
-        <ul class="flex items-center md:hidden">
-          <li class="navigation-item"><a href="#">ست</a></li>
-          <li class="navigation-item"><a href="#">لباس</a></li>
-          <li class="navigation-item"><a href="#">کفش</a></li>
-          <li class="navigation-item"><a href="#">اکسسوری</a></li>
-          <li class="navigation-item"><a href="#">تخفیف ها</a></li>
-          <li class="navigation-item"><a href="#">فروشگاه حضوری</a></li>
-        </ul>
+          <ul class="flex md:hidden">
+            <li class="navigation-item"><a href="#">ست</a></li>
+            <li class="navigation-item"><a href="#">لباس</a></li>
+            <li class="navigation-item"><a href="#">کفش</a></li>
+            <li class="navigation-item group"><a>اکسسوری</a>
+              <div class="sub-menu group-hover:block">
+                <div class="justify-between flex container p-0">
+                  <ul class="font-bold text-2xs flex gap-4">
+                    <div>
+                      <li class=""><a href="#">ست</a></li>
+                      <li class=""><a href="#">لباس</a></li>
+                      <li class=""><a href="#">کفش</a></li>
+                    </div>
+                    <div>
+                      <li class=""><a href="#">تخفیف ها</a></li>
+                      <li class=""><a href="#">فروشگاه حضوری</a></li>
+                    </div>
+                  </ul>
 
-        <div class="mobile-menu xs:px-4 pt-16 hidden md:block select-none" id="mobileMenu">
-          <div class="flex items-center close-modal-btn gap-2 right-7 xs:right-3">
-            <button class="flex items-center pointer-events-none"><i class="fa fa-times"></i></button>
-            <span class="pointer-events-none text-base">بستن منو</span>
-          </div>
-          <ul class="space-y-6">
-            <div class="space-y-2">
-              <li class="flex border-solid border border-gray-900">
-                <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
-                <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
-              </li>
-
-              <li class="cursor-pointer flex items-center gap-2 group btn btn-md btn--primary p-2">
-                <i class="pointer-events-none text-xl fa fa-user-plus"></i>
-                <span class="pointer-events-none">ثبت نام / ورود</span>
-              </li>
-            </div>
-            <li class=""><a href="#">لباس</a></li>
-            <li class=""><a href="#">کفش</a></li>
-            <li class="">
-              <button class="btn--icon justify-between accordion-btn w-full">اکسسوری<i class="fa fa-angle-down"></i></button>
-              <div class="acc-panel transition-all">
-                <ul class="pr-4 space-y-6 py-2 mt-4 bg-gray-100">
-                  <li class=""><a href="#">لباس</a></li>
-                  <li class=""><a href="#">کفش</a></li>
-                  <li class=""><a href="#">تخفیف ها</a></li>
-                  <li class=""><a href="#">فروشگاه حضوری</a></li>
-                </ul>
+                  <img src="assets/site/menu-1.jpg" alt="">
+                </div>
               </div>
             </li>
-            <li class=""><a href="#">تخفیف ها</a></li>
-            <li class=""><a href="#">فروشگاه حضوری</a></li>
+            <li class="navigation-item"><a href="#">تخفیف ها</a></li>
+            <li class="navigation-item"><a href="#">فروشگاه حضوری</a></li>
           </ul>
-        </div>
-      </div>
 
-      <div class="flex">
+          <div class="mobile-menu xs:px-4 pt-16 hidden md:block select-none shadow-2xl" id="mobileMenu">
+            <div class="flex items-center close-modal-btn gap-2 right-7 xs:right-3">
+              <button class="flex items-center pointer-events-none"><i class="fa fa-times"></i></button>
+              <span class="pointer-events-none text-base">بستن منو</span>
+            </div>
+            <ul class="divide-gray-200 divide-solid divide-y">
+              <div class="space-y-2">
+                <li class="flex border-solid border border-gray-900">
+                  <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
+                  <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
+                </li>
+
+                <li class="cursor-pointer flex items-center gap-2 group btn btn-md btn--primary p-2" data-modal="userAccountModal" onclick="showModal(event)">
+                  <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+                  <span class="pointer-events-none">ثبت نام / ورود</span>
+                </li>
+              </div>
+              <li class=" py-4"><a href="#">لباس</a></li>
+              <li class=" py-4"><a href="#">کفش</a></li>
+              <li>
+                <button class="btn--icon justify-between accordion-btn w-full py-4">اکسسوری<i class="fa fa-angle-down"></i></button>
+                <div class="acc-panel transition-all">
+                  <ul class="pr-4 space-y-6 py-2 mt-4 bg-gray-100">
+                    <li><a href="#">لباس</a></li>
+                    <li><a href="#">کفش</a></li>
+                    <li><a href="#">تخفیف ها</a></li>
+                    <li><a href="#">فروشگاه حضوری</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class=" py-4"><a href="#">تخفیف ها</a></li>
+              <li class=" py-4"><a href="#">فروشگاه حضوری</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex">
         <span class="nav-action md:hidden group">
           <span class="text-3xl xl:text-2xl"><i class="fa fa-search"></i></span>
 
@@ -127,26 +288,27 @@
           </div>
         </span>
 
-        <div class="nav-action md:hidden group">
-          <span class="text-3xl xl:text-2xl"><i class="fa fa-user"></i></span>
+          <div class="nav-action md:hidden group">
+            <a href="#" class="text-3xl xl:text-2xl"><i class="fa fa-user"></i></a>
 
-          <div class="nav-drop-down group-hover:block">
-            <ul>
-              <li class="cursor-pointer flex items-center gap-2" data-modal="userAccountModal" onclick="showModal(event)">
-                <i class="pointer-events-none text-xl fa fa-user-plus"></i>
-                <span class="pointer-events-none">ثبت نام / ورود</span>
-              </li>
-            </ul>
+            <div class="nav-drop-down group-hover:block">
+              <ul>
+                <li class="cursor-pointer flex items-center gap-2" data-modal="userAccountModal" onclick="showModal(event)">
+                  <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+                  <span class="pointer-events-none">ثبت نام / ورود</span>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="nav-action group">
-          <span class="text-3xl xl:text-2xl"><i class="fa fa-shopping-bag"></i></span>
+          <div class="nav-action group">
+            <a href="#" class="text-3xl xl:text-2xl"><i class="fa fa-shopping-bag"></i></a>
 
-          <div class="nav-drop-down group-hover:flex flex-col md:group-hover:hidden">
-            <h1 class="text-xl font-bold">سبد خرید</h1>
-            <a href="" class="btn btn--md btn--tertiary flex-auto mt-4">جزئیات سبد خرید</a>
-            <p class="border-t border-b border-solid border-gray-400 py-8 my-12 text-center">سبد خرید شما خالیست !</p>
+            <div class="nav-drop-down group-hover:flex flex-col md:group-hover:hidden">
+              <h1 class="text-xl font-bold">سبد خرید</h1>
+              <a href="" class="btn btn--md btn--tertiary flex-auto mt-4">جزئیات سبد خرید</a>
+              <p class="border-t border-b border-solid border-gray-400 py-8 my-12 text-center">سبد خرید شما خالیست !</p>
+            </div>
           </div>
         </div>
       </div>
@@ -277,7 +439,7 @@
                 <img src="assets/img/shirt/shirt-1--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-1--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -308,7 +470,7 @@
                 <img src="assets/img/shirt/shirt-2--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-2--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -339,7 +501,7 @@
                 <img src="assets/img/shirt/shirt-3--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-3--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -370,7 +532,7 @@
                 <img src="assets/img/shirt/shirt-4--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-4--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -401,7 +563,7 @@
                 <img src="assets/img/shirt/shirt-1--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-1--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -432,7 +594,7 @@
                 <img src="assets/img/shirt/shirt-2--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-2--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -463,7 +625,7 @@
                 <img src="assets/img/shirt/shirt-3--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-3--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -494,7 +656,7 @@
                 <img src="assets/img/shirt/shirt-4--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-4--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -525,7 +687,7 @@
                 <img src="assets/img/shirt/shirt-1--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-1--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -556,7 +718,7 @@
                 <img src="assets/img/shirt/shirt-2--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-2--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -587,7 +749,7 @@
                 <img src="assets/img/shirt/shirt-3--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-3--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -618,7 +780,7 @@
                 <img src="assets/img/shirt/shirt-4--1.jpg" alt=""/>
                 <img class="product-image-hover-state" src="assets/img/shirt/shirt-4--2.jpg" alt=""/>
 
-                <button class="btn btn--sm btn--primary product-btn flex items-center justify-center">
+                <button class="btn btn--sm btn--primary product-btn lg:hidden flex items-center justify-center">
                   <span>مشاهده سریع &nbsp;</span>
                   <span class="flex mt-0.5"><i class="fa fa-search"></i></span>
                 </button>
@@ -767,6 +929,7 @@
     </div>
   </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

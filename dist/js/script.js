@@ -2,7 +2,6 @@
 /* accordion */
 const accordion = document.querySelectorAll('.accordion-btn');
 if (accordion.length) {
-  console.log('check exist');
   for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', () => {
       accordion[i].classList.toggle('active');
@@ -18,8 +17,17 @@ if (accordion.length) {
 
 /* modal */
 const overlay = document.querySelector('.overlay');
-function showModal(event) {
-  const targetModal = event.target.getAttribute('data-modal');
+function showModal(event, data) {
+  data = data || event.target.getAttribute('data-modal');
+
+  // close mobile menu on modal showen
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenu.classList.contains('active')) {
+    mobileMenu.classList.remove('active');
+  }
+
+  // select targets
+  const targetModal = data;
   const targetModalEl = document.getElementById(targetModal);
 
   // toggle modal
@@ -52,7 +60,6 @@ function showModal(event) {
 /* tab navigation */
 const tabNavigation = document.querySelectorAll('.tab-navigation');
 if (tabNavigation.length) {
-  console.log('check exist');
   for (let i = 0; i < tabNavigation.length; i++) {
     const tabBtn = tabNavigation[i].querySelectorAll('.tab-btn');
     const tabItem = tabNavigation[i].querySelectorAll('.tab-item');
@@ -80,6 +87,9 @@ const hoverOverlay = document.querySelector('.hover-overlay');
 
 const navigation = document.getElementById('navigation');
 const nav = document.querySelector('nav');
+
+// submenu config
+const navigationItem = document.querySelectorAll('.navigation-item');
 
 navActions.forEach(item => {
   item.addEventListener('mouseenter', showOverLay);
@@ -110,4 +120,98 @@ function hideOverLay() {
 
     hoverOverlay.classList.remove('active');
   }
+}
+
+// submenu overlay
+navigationItem.forEach(item => {
+  const subMenu = item.querySelector('.sub-menu');
+  if (subMenu) {
+    item.addEventListener('mouseenter', showSubOverLay);
+    item.addEventListener('mouseleave', hideSubOverLay);
+  }
+
+  function showSubOverLay() {
+    if (window.innerWidth > 767) {
+      const navOffset = nav.offsetTop;
+      if (window.pageYOffset >= navOffset) {
+        hoverOverlay.style.top = nav.clientHeight + subMenu.scrollHeight + 'px';
+      } else {
+        hoverOverlay.style.top =
+          navigation.clientHeight + subMenu.scrollHeight + 'px';
+      }
+
+      hoverOverlay.classList.add('active');
+    }
+  }
+
+  function hideSubOverLay() {
+    if (window.innerWidth > 767) {
+      const navOffset = nav.offsetTop;
+      if (window.pageYOffset >= navOffset) {
+        hoverOverlay.style.top = nav.clientHeight + subMenu.scrollHeight + 'px';
+      } else {
+        hoverOverlay.style.top =
+          navigation.clientHeight + subMenu.scrollHeight + 'px';
+      }
+
+      hoverOverlay.classList.remove('active');
+    }
+  }
+});
+
+// sticky navigation
+const navOffset = nav.offsetTop;
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset >= navOffset) {
+    nav.classList.add('sticky');
+    hoverOverlay.style.top = nav.clientHeight + 'px';
+  } else {
+    nav.classList.remove('sticky');
+    hoverOverlay.style.top = navigation.clientHeight + 'px';
+  }
+});
+
+// product btn
+const productBtn = document.querySelectorAll('.product-btn');
+if (productBtn.length) {
+  productBtn.forEach(item => {
+    item.addEventListener('click', e => {
+      showModal(e, 'productModal');
+    });
+  });
+}
+
+// product modal swiper
+const productModalContentInner = document.querySelector(
+  '.modal.product-modal .product-content-inner'
+);
+if (productModalContentInner) {
+  productModalContentInner.style.height =
+    productModalContentInner.offsetHeight + 'px';
+  productModalContentInner.style.padding = '30px';
+  productModalContentInner.style.flexGrow = '1';
+  document.querySelector('.modal.product-modal .gallery-top').style.width =
+    (screen.height / 2) * 1.2 + 'px';
+}
+
+// swiepr config
+const galleryThumbs = new Swiper('.modal.product-modal .gallery-thumbs', {
+  spaceBetween: 15,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+const galleryTop = new Swiper('.modal.product-modal .gallery-top', {
+  spaceBetween: 10,
+  grabCursor: true,
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+});
+
+// load overlay mobile menu
+if (window.innerWidth < 768) {
+  overlay.style.zIndex = 20;
 }
