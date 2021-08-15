@@ -197,60 +197,6 @@
     </div>
   </div>
 
-  <!-- set Info Modal -->
-  <div class="modal py-16 px-8 rounded-lg setinfo-modal w-4/6 md:w-10/12 sm:p-4" id="setInfoModal">
-    <button class="close-modal-btn right-8 top-8"><i class="fa fa-times"></i></button>
-
-    <div class="flex gap-12 sm:flex-col sm:overflow-y-scroll sm:max-h-[90vh]">
-      <a href="#" class="w-5/12 sm:w-full">
-        <img src="assets/img/sets/set-1.jpg" alt="" class="w-full">
-      </a>
-
-      <div class="w-7/12 sm:w-full">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="slide 2" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="slide 3" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--4.jpg" alt="slide 4" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-
-        <a href="#" class="btn btn--md mt-4 btn--primary block mx-auto max-w-[10rem]">خرید</a>
-      </div>
-    </div>
-  </div>
-
   <!-- navigation -->
   <div class="flex flex-col relative flex flex-col" id="navigation">
     <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
@@ -341,7 +287,7 @@
                 <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
                 <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
               </div>
-
+              
               <div class="space-y-3 pt-4">
                 <div class="flex">
                   <div class="w-2/6"><img src="assets/img/sets/set-5.jpg" alt="" class=""></div>
@@ -470,16 +416,202 @@
   </ul>
 
   <!--main-->
-  <main class="container sets mt-24 grid grid-cols-3 md:grid-cols-2 gap-4">
-    <div class="set-item"><img src="assets/img/sets/set-1.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-2.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-3.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-4.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-5.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-6.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-7.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-8.jpg" alt=""></div>
-    <div class="set-item"><img src="assets/img/sets/set-9.jpg" alt=""></div>
+  <main class="container search">
+    <div class="tab-navigation flex flex-col">
+      <div class="flex justify-center py-8">
+        <button class="tab-btn btn btn--md btn--secondary border-0 border-b w-3/12 lg:flex-grow active">لیست محصولات</button>
+        <button class="tab-btn btn btn--md btn--secondary border-0 border-b w-3/12 lg:flex-grow">لیست ست ها</button>
+      </div>
+
+      <div class="py-4">
+        <div class="tab-item active">
+          <div class="grid grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="" class="p-1 border border-gray-200">
+              </div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-item">
+          <div class="grid grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div>
+              <div><img src="assets/img/sets/set-1.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-2.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-3.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-4.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-5.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-6.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-7.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-8.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-9.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+            <div>
+              <div><img src="assets/img/sets/set-10.jpg" alt=""></div>
+              <div class="text-center pt-4">
+                <h1>پیراهن مردانه 21208</h1>
+                <p class="mt-2">در درسته <span class="font-bold">پیراهن مردانه</span></p>
+                <a href="#" class="btn btn--sm btn--secondary">مشاهده محصول</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- footer -->

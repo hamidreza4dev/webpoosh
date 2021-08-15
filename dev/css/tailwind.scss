@@ -1,90 +1,92 @@
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: bold;
-  src: url('../fonts/eot/iranyekanwebbold.eot');
-  src: url('../fonts/eot/iranyekanwebbold.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/woff2/iranyekanwebbold.woff2') format('woff2'),
-    url('../fonts/woff/iranyekanwebbold.woff') format('woff'),
-    url('../fonts/ttf/iranyekanwebbold.ttf') format('truetype');
-  src: url('../fonts/eot/iranyekanwebbold(fanum).eot');
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/eot/iranyekanweblight.eot');
-  src: url('../fonts/eot/iranyekanweblight.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/woff2/iranyekanweblight.woff2') format('woff2'),
-    url('../fonts/woff/iranyekanweblight.woff') format('woff'),
-    url('../fonts/ttf/iranyekanweblight.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/eot/iranyekanwebregular.eot');
-  src: url('../fonts/eot/iranyekanwebregular.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/woff2/iranyekanwebregular.woff2') format('woff2'),
-    url('../fonts/woff/iranyekanwebregular.woff') format('woff'),
-    url('../fonts/ttf/iranyekanwebregular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: bold;
-  src: url('../fonts/Farsi_numerals/eot/iranyekanwebbold(fanum).eot');
-  src: url('../fonts/Farsi_numerals/eot/iranyekanwebbold(fanum).eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/Farsi_numerals/woff2/iranyekanwebbold(fanum).woff2')
-      format('woff2'),
-    url('../fonts/Farsi_numerals/woff/iranyekanwebbold(fanum).woff')
-      format('woff'),
-    url('../fonts/Farsi_numerals/ttf/iranyekanwebbold(fanum).ttf')
-      format('truetype');
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/Farsi_numerals/eot/iranyekanweblight(fanum).eot');
-  src: url('../fonts/Farsi_numerals/eot/iranyekanweblight(fanum).eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/Farsi_numerals/woff2/iranyekanweblight(fanum).woff2')
-      format('woff2'),
-    url('../fonts/Farsi_numerals/woff/iranyekanweblight(fanum).woff')
-      format('woff'),
-    url('../fonts/Farsi_numerals/ttf/iranyekanweblight(fanum).ttf')
-      format('truetype');
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Farsi_numerals/eot/iranyekanwebregular(fanum).eot');
-  src: url('../fonts/Farsi_numerals/eot/iranyekanwebregular(fanum).eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/Farsi_numerals/woff2/iranyekanwebregular(fanum).woff2')
-      format('woff2'),
-    url('../fonts/Farsi_numerals/woff/iranyekanwebregular(fanum).woff')
-      format('woff'),
-    url('../fonts/Farsi_numerals/ttf/iranyekanwebregular(fanum).ttf')
-      format('truetype');
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* My Custom Components */
+@layer base {
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/eot/iranyekanwebbold.eot');
+    src: url('../fonts/eot/iranyekanwebbold.eot?#iefix')
+        format('embedded-opentype'),
+      url('../fonts/woff2/iranyekanwebbold.woff2') format('woff2'),
+      url('../fonts/woff/iranyekanwebbold.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+    src: url('../fonts/eot/iranyekanwebbold(fanum).eot');
+  }
+
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/eot/iranyekanweblight.eot');
+    src: url('../fonts/eot/iranyekanweblight.eot?#iefix')
+        format('embedded-opentype'),
+      url('../fonts/woff2/iranyekanweblight.woff2') format('woff2'),
+      url('../fonts/woff/iranyekanweblight.woff') format('woff'),
+      url('../fonts/ttf/iranyekanweblight.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/eot/iranyekanwebregular.eot');
+    src: url('../fonts/eot/iranyekanwebregular.eot?#iefix')
+        format('embedded-opentype'),
+      url('../fonts/woff2/iranyekanwebregular.woff2') format('woff2'),
+      url('../fonts/woff/iranyekanwebregular.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/Farsi_numerals/eot/iranyekanwebbold(fanum).eot');
+    src: url('../fonts/Farsi_numerals/eot/iranyekanwebbold(fanum).eot?#iefix')
+        format('embedded-opentype'),
+      url('../fonts/Farsi_numerals/woff2/iranyekanwebbold(fanum).woff2')
+        format('woff2'),
+      url('../fonts/Farsi_numerals/woff/iranyekanwebbold(fanum).woff')
+        format('woff'),
+      url('../fonts/Farsi_numerals/ttf/iranyekanwebbold(fanum).ttf')
+        format('truetype');
+  }
+
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Farsi_numerals/eot/iranyekanweblight(fanum).eot');
+    src: url('../fonts/Farsi_numerals/eot/iranyekanweblight(fanum).eot?#iefix')
+        format('embedded-opentype'),
+      url('../fonts/Farsi_numerals/woff2/iranyekanweblight(fanum).woff2')
+        format('woff2'),
+      url('../fonts/Farsi_numerals/woff/iranyekanweblight(fanum).woff')
+        format('woff'),
+      url('../fonts/Farsi_numerals/ttf/iranyekanweblight(fanum).ttf')
+        format('truetype');
+  }
+
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Farsi_numerals/eot/iranyekanwebregular(fanum).eot');
+    src: url('../fonts/Farsi_numerals/eot/iranyekanwebregular(fanum).eot?#iefix')
+        format('embedded-opentype'),
+      url('../fonts/Farsi_numerals/woff2/iranyekanwebregular(fanum).woff2')
+        format('woff2'),
+      url('../fonts/Farsi_numerals/woff/iranyekanwebregular(fanum).woff')
+        format('woff'),
+      url('../fonts/Farsi_numerals/ttf/iranyekanwebregular(fanum).ttf')
+        format('truetype');
+  }
+}
+
 @layer components {
   p {
     @apply text-2xs leading-5;

@@ -226,11 +226,17 @@ const galleryTop = new Swiper('.modal.product-modal .gallery-top', {
 // set info swiepr
 const setInfoSwiper = new Swiper('.modal.setinfo-modal .swiper-container', {
   spaceBetween: 10,
-  slidesPerView: 3,
+  slidesPerView: 2,
   grabCursor: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+    },
   },
 });
 
