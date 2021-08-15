@@ -641,4 +641,30 @@
       }
     }
   }
+
+  main.sets {
+    .set-item {
+      @apply transition-all cursor-pointer hover:brightness-75;
+
+      img {
+        @apply mx-auto w-full;
+      }
+    }
+  }
+
+  .modal.setinfo-modal {
+    .swiper-button-prev,
+    .swiper-button-next {
+      @apply text-gray-900 transition-all rounded-full bg-white shadow-md w-12 h-12;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 16px;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.725 !important;
+    }
+  }
 }

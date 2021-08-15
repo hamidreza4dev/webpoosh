@@ -7,6 +7,7 @@ module.exports = {
     './dist/index.html',
     './dist/products.html',
     './dist/cart.html',
+    './dist/sets.html',
     './dist/js/script.js',
   ],
   darkMode: false, // or 'media' or 'class'

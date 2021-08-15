@@ -198,6 +198,14 @@ if (productModalContentInner) {
   productModalContentInner.style.flexGrow = '1';
 }
 
+// sets btn
+const setItemBtn = document.querySelectorAll('.set-item');
+if (setItemBtn.length) {
+  setItemBtn.forEach(item => {
+    item.addEventListener('click', () => showModal(event, 'setInfoModal'));
+  });
+}
+
 // swiepr config
 const galleryThumbs = new Swiper('.modal.product-modal .gallery-thumbs', {
   spaceBetween: 15,
@@ -212,6 +220,17 @@ const galleryTop = new Swiper('.modal.product-modal .gallery-top', {
   grabCursor: true,
   thumbs: {
     swiper: galleryThumbs,
+  },
+});
+
+// set info swiepr
+const setInfoSwiper = new Swiper('.modal.setinfo-modal .swiper-container', {
+  spaceBetween: 10,
+  slidesPerView: 3,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 

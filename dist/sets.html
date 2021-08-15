@@ -197,6 +197,60 @@
     </div>
   </div>
 
+  <!-- set Info Modal -->
+  <div class="modal py-16 px-8 rounded-lg setinfo-modal" id="setInfoModal">
+    <button class="close-modal-btn"><i class="fa fa-times"></i></button>
+
+    <div class="flex gap-12">
+      <a href="#" class="w-5/12">
+        <img src="assets/img/sets/set-1.jpg" alt="" class="w-full">
+      </a>
+
+      <div class="w-7/12">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="slide 2" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="slide 3" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--4.jpg" alt="slide 4" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+        <a href="#" class="btn btn--md mt-4 btn--primary block mx-auto max-w-[10rem]">خرید</a>
+      </div>
+    </div>
+  </div>
+
   <!-- navigation -->
   <div class="flex flex-col relative flex flex-col" id="navigation">
     <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
@@ -306,9 +360,71 @@
             <a href="#" class="text-3xl xl:text-2xl"><i class="fa fa-shopping-bag"></i></a>
 
             <div class="nav-drop-down group-hover:flex flex-col md:group-hover:hidden">
+              <div class="font-bold text-2xs flex justify-between">
+                <h1>سبد خرید</h1>
+                <span>1,200,000</span>
+              </div>
               <h1 class="text-xl font-bold">سبد خرید</h1>
               <a href="" class="btn btn--md btn--tertiary flex-auto mt-4">جزئیات سبد خرید</a>
               <p class="border-t border-b border-solid border-gray-400 py-8 my-12 text-center">سبد خرید شما خالیست !</p>
+
+              <div>
+                <div class="grid grid-cols-3 gap-2"> <!--inner-->
+                  <div class="space-y-2"> <!--item-->
+                    <div class="">
+                      <img src="assets/img/shirt/shirt-2--2.jpg" alt="" class="w-full">
+                    </div>
+                    <div class="relative">
+                      <h1 class="text-2xs">پیراهن راه راه</h1>
+                      <h2>
+                        <span>سفید</span>,<span>۴۳</span>
+                      </h2>
+                      <p>1,200,000 تومان</p>
+
+                      <div class="text-xs text-gray-500 flex justify-between">
+                        <button>حذف</button>
+                        <button data-modal="productModal" onclick="showModal(event)">ویرایش</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-2"> <!--item-->
+                    <div class="">
+                      <img src="assets/img/shirt/shirt-2--2.jpg" alt="" class="w-full">
+                    </div>
+                    <div class="relative">
+                      <h1 class="text-2xs">پیراهن راه راه</h1>
+                      <h2>
+                        <span>سفید</span>,<span>۴۳</span>
+                      </h2>
+                      <p>1,200,000 تومان</p>
+
+                      <div class="text-xs text-gray-500 flex justify-between">
+                        <button>حذف</button>
+                        <button data-modal="productModal" onclick="showModal(event)">ویرایش</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-2"> <!--item-->
+                    <div class="">
+                      <img src="assets/img/shirt/shirt-2--2.jpg" alt="" class="w-full">
+                    </div>
+                    <div class="relative">
+                      <h1 class="text-2xs">پیراهن راه راه</h1>
+                      <h2>
+                        <span>سفید</span>,<span>۴۳</span>
+                      </h2>
+                      <p>1,200,000 تومان</p>
+
+                      <div class="text-xs text-gray-500 flex justify-between">
+                        <button>حذف</button>
+                        <button data-modal="productModal" onclick="showModal(event)">ویرایش</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -323,99 +439,16 @@
   </ul>
 
   <!--main-->
-  <main class="container flex gap-40 xl:gap-20 lg:flex-col lg:max-w-xl cart px-24 mt-24 2xl:px-4">
-    <div class="flex-1">
-      <h4 class="text-xl my-4">سبد خرید شما</h4>
-      <hr>
-      <br>
-      <div class="">
-        <div class="grid grid-cols-min-col gap-4">
-          <div class="cart-product-item-image row-span-2 w-40">
-            <img src="assets/img/shirt/shirt-1--1.jpg" class="w-full">
-          </div>
-
-          <div class="cart-product-item-info space-y-2">
-            <h1 class="text-sm font-bold">پیراهن راه راه 23225</h1>
-            <p>
-              سایز:
-              <span>L</span>
-            </p>
-
-            <p>
-              رنگ:
-              <span>نارنجی</span>
-            </p>
-
-            <p>
-              کد:
-              <span>2022323411</span>
-            </p>
-
-            <p class="cart-product-style">
-              367,000 تومان
-            </p>
-          </div>
-
-          <div class="flex gap-0.5">
-            <button class="btn btn--sm btn--secondary flex-1 border" data-modal="productModal" onclick="showModal(event)">ویرایش</button>
-            <button class="btn btn--sm btn--secondary flex-1 border">حذف</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="flex-1">
-      <div class="bg-gray-50 p-12">
-        <div class="flex border-solid border border-gray-900">
-          <input type="text" class="border-0 flex-auto focus:ring-0 text-gray-900" placeholder="کد تخفیف را وارد کنید">
-          <button class="btn--primary transition text-white px-8">اعمال کد</button>
-        </div>
-
-        <div class="">
-          <div class="flex justify-between py-3">
-            <h1 class="text-2xs font-bold">جمع سفارش</h1>
-            <h2>
-              <span>367,000</span>
-              <span>تومان</span>
-            </h2>
-          </div>
-
-          <hr style="border-color: rgba(0,0,0, 0.4); margin: 0;">
-
-          <div class="flex justify-between py-3">
-            <h1 class="text-2xs font-bold">جمع کل</h1>
-            <h2>
-              <span>367,000</span>
-              <span>تومان</span>
-            </h2>
-          </div>
-
-          <div class="flex items-center gap-2 mb-4">
-            <i class="far fa-clock"></i>
-            <h6 class="text-2xs font-bold">یادآوری سفارش</h6>
-          </div>
-
-          <p>امکان اتمام محصولات موجود در سبد خرید شما تا قبل از پرداخت کامل وجود دارد</p>
-
-          <hr>
-
-          <div class="flex items-center py-4 gap-2">
-            <i class="fa fa-phone"></i>
-            <span>خدمات مشتریان 05 50 00 91 - 021</span>
-          </div>
-
-          <hr>
-
-          <a href="#" class="flex items-center py-4 gap-2">
-            <i class="fas fa-truck"></i>
-            <span>روش ارسال</span>
-          </a>
-          <hr>
-          <a href="#" class="btn btn--md btn--tertiary w-full my-12">پرداخت صورت حساب</a>
-        </div>
-      </div>
-    </div>
+  <main class="container sets mt-24 grid grid-cols-3 gap-4">
+    <div class="set-item"><img src="assets/img/sets/set-1.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-2.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-3.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-4.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-5.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-6.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-7.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-8.jpg" alt=""></div>
+    <div class="set-item"><img src="assets/img/sets/set-9.jpg" alt=""></div>
   </main>
 
   <!-- footer -->
