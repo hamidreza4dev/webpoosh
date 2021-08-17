@@ -18,13 +18,21 @@ if (accordion.length) {
 /* modal */
 const overlay = document.querySelector('.overlay');
 function showModal(event, data) {
-  data = data || event.target.getAttribute('data-modal');
-
   // close mobile menu on modal showen
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (mobileMenu.classList.contains('active')) {
-    mobileMenu.classList.remove('active');
+  const allModals = document.querySelectorAll('.modal');
+  for (let i = 0; i < allModals.length; i++) {
+    allModals[i].classList.remove('active');
   }
+
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenu) {
+    if (mobileMenu.classList.contains('active')) {
+      mobileMenu.classList.remove('active');
+    }
+  }
+
+  // get element and second attr
+  data = data || event.target.getAttribute('data-modal');
 
   // select targets
   const targetModal = data;
@@ -33,6 +41,7 @@ function showModal(event, data) {
   // toggle modal
   overlay.classList.add('active');
   targetModalEl.classList.add('active');
+  document.body.classList.add('modal-open');
 
   // close btn
   const closeModalBtn = targetModalEl.querySelector('.close-modal-btn');
@@ -54,6 +63,7 @@ function showModal(event, data) {
   function closeModal() {
     overlay.classList.remove('active');
     targetModalEl.classList.remove('active');
+    document.body.classList.remove('modal-open');
   }
 }
 
@@ -207,7 +217,7 @@ if (setItemBtn.length) {
 }
 
 // swiepr config
-const galleryThumbs = new Swiper('.modal.product-modal .gallery-thumbs', {
+const galleryThumbsModal = new Swiper('.modal.product-modal .gallery-thumbs', {
   spaceBetween: 15,
   slidesPerView: 4,
   freeMode: true,
@@ -215,11 +225,11 @@ const galleryThumbs = new Swiper('.modal.product-modal .gallery-thumbs', {
   watchSlidesProgress: true,
   direction: 'vertical',
 });
-const galleryTop = new Swiper('.modal.product-modal .gallery-top', {
+const galleryTopModal = new Swiper('.modal.product-modal .gallery-top', {
   spaceBetween: 10,
   grabCursor: true,
   thumbs: {
-    swiper: galleryThumbs,
+    swiper: galleryThumbsModal,
   },
 });
 
@@ -240,7 +250,75 @@ const setInfoSwiper = new Swiper('.modal.setinfo-modal .swiper-container', {
   },
 });
 
-// load overlay mobile menu
-if (window.innerWidth < 768) {
-  overlay.style.zIndex = 20;
-}
+// product details
+const galleryThumbs = new Swiper('main.product-details .gallery-thumbs', {
+  spaceBetween: 15,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  direction: 'horizontal',
+
+  breakpoints: {
+    1024: {
+      direction: 'vertical',
+    },
+  },
+});
+const galleryTop = new Swiper('main.product-details .gallery-top', {
+  spaceBetween: 10,
+  grabCursor: true,
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+});
+
+// index.html header slider
+const headerSlider = new Swiper('.header-slider', {
+  grabCursor: true,
+  loop: true,
+});
+
+const newProductsSlider = new Swiper('.new-product-slider', {
+  grabCursor: true,
+  slidesPerView: 2,
+  spaceBetween: 20,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+    },
+
+    768: {
+      slidesPerView: 3,
+    },
+
+    576: {
+      slidesPerView: 2,
+    },
+  },
+});
+
+const highSellProductsSlider = new Swiper('.high-sell-product-slider', {
+  grabCursor: true,
+  slidesPerView: 2,
+  spaceBetween: 20,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+    },
+
+    768: {
+      slidesPerView: 4,
+    },
+
+    680: {
+      slidesPerView: 3,
+    },
+
+    576: {
+      slidesPerView: 2,
+    },
+  },
+});

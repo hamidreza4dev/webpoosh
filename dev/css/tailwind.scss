@@ -88,6 +88,17 @@
 }
 
 @layer components {
+  body.modal-open {
+    @apply pr-[15px];
+    overflow: hidden !important;
+
+    @screen md {
+      & {
+        @apply p-0;
+      }
+    }
+  }
+
   p {
     @apply text-2xs leading-5;
   }
@@ -96,8 +107,27 @@
     @apply mb-4;
   }
 
+  table.table-bordered {
+    @apply border border-gray-300 border-solid text-center;
+
+    tr {
+      th {
+        @apply bg-gray-100 hover:bg-gray-300 transition-colors p-4;
+      }
+
+      th,
+      td {
+        @apply border-r border-b border-gray-300 border-solid;
+      }
+    }
+  }
+
   .btn {
     @apply outline-none border-none transition inline-block text-center;
+  }
+
+  .btn:disabled {
+    @apply opacity-40 pointer-events-none;
   }
 
   .btn.btn--lg {
@@ -126,7 +156,7 @@
 
   .btn--primary:focus,
   .btn--primary.active {
-    @apply ring-4 ring-gray-300 transition duration-300 bg-gray-700 text-white z-10;
+    @apply ring-4 ring-gray-300 transition duration-300 bg-gray-700 text-white z-[2];
   }
 
   .btn--secondary {
@@ -135,7 +165,7 @@
 
   .btn--secondary:focus,
   .btn--secondary.active {
-    @apply ring-4 ring-gray-400 transition duration-300 bg-gray-900 text-white z-10;
+    @apply ring-4 ring-gray-400 transition duration-300 bg-gray-900 text-white z-[2];
   }
 
   .btn--tertiary {
@@ -144,7 +174,7 @@
 
   .btn--tertiary:focus,
   .btn--tertiary.active {
-    @apply ring-4 ring-green-300 transition duration-300 bg-green-600 text-white z-10;
+    @apply ring-4 ring-green-300 transition duration-300 bg-green-600 text-white z-[2];
   }
 
   [type='text'],
@@ -330,7 +360,7 @@
     @apply font-bold cursor-pointer flex items-center;
 
     a {
-      @apply p-5 relative border-b-2 border-transparent border-solid text-2xs inline-block z-20;
+      @apply p-5 relative border-b-2 border-transparent border-solid text-2xs inline-block z-[15];
 
       &::after {
         content: '';
@@ -450,7 +480,7 @@
   }
 
   footer {
-    @apply mt-24;
+    @apply mt-8;
 
     .footer-inner {
       @apply flex lg:flex-wrap lg:gap-y-16 lg:mb-8 sm:flex-col;
@@ -588,14 +618,9 @@
       width: 100%;
       height: 100%;
     }
-    /*
-    @media only screen and (min-width: 100px) and (max-width: 500px) {
-      .gallery-top img {
-        width: 100%;
-        height: auto;
-      }
-    }*/
+  }
 
+  .product-swiper {
     .selected-color {
       @apply flex gap-2;
 
@@ -667,6 +692,52 @@
 
     .swiper-button-disabled {
       opacity: 0.725 !important;
+    }
+  }
+
+  main.product-details {
+    .product-wrapper {
+      @apply flex mx-auto max-w-[85%] xl:max-w-full lg:grid lg:grid-cols-2 md:flex md:flex-col;
+
+      .gallery-thumbs {
+        @apply m-0 w-[120px] pt-[4px] px-4 cursor-pointer lg:row-start-2 row-end-3 lg:w-full lg:p-0 md:order-2 md:max-w-md md:mx-auto;
+
+        .swiper-slide {
+          @apply opacity-40 transition-opacity duration-200;
+          height: 100px !important;
+
+          @screen lg {
+            & {
+              height: auto !important;
+            }
+          }
+
+          img {
+            @apply border border-2 border-transparent p-[4px] transition-colors;
+
+            &:hover {
+              @apply border-gray-900;
+            }
+          }
+
+          &-thumb-active {
+            @apply opacity-100;
+            img {
+              @apply border-gray-900;
+            }
+          }
+        }
+      }
+
+      .swiper-container.gallery-top {
+        @apply w-3/12 mb-16 lg:mb-8 md:mb-0 lg:w-full md:order-1 md:max-w-md md:mx-auto;
+
+        .swiper-slide {
+          img {
+            @apply h-full object-contain object-center md:w-screen;
+          }
+        }
+      }
     }
   }
 }

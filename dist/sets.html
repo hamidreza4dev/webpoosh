@@ -57,6 +57,60 @@
     </div>
   </div>
 
+  <!-- set Info Modal -->
+  <div class="modal py-16 px-8 rounded-lg setinfo-modal w-4/6 md:w-10/12 sm:p-4" id="setInfoModal">
+    <button class="close-modal-btn right-8 top-8"><i class="fa fa-times"></i></button>
+
+    <div class="flex gap-12 sm:flex-col sm:overflow-y-scroll sm:max-h-[90vh]">
+      <a href="#" class="w-5/12 sm:w-full">
+        <img src="assets/img/sets/set-1.jpg" alt="" class="w-full">
+      </a>
+
+      <div class="w-7/12 sm:w-full">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="slide 2" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="slide 3" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/shirt/shirt-2--2--modal--4.jpg" alt="slide 4" />
+              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
+                <h1>پولوشرت مردانه 93102</h1>
+                <p>1,200,000 تومان</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+        <a href="#" class="btn btn--md mt-4 btn--primary block mx-auto max-w-[10rem]">خرید</a>
+      </div>
+    </div>
+  </div>
+
   <!-- product modal -->
   <div class="modal product-modal product-swiper lg:w-screen lg:h-screen lg:overflow-y-scroll" id="productModal">
     <div class="flex lg:grid lg:grid-cols-[70vh 1fr 0fr]">
@@ -150,7 +204,7 @@
               <span>3Xl</span>
             </label>
           </div>
-          <button class="text-blue-500 underline text-sm"><i class="fa fa-ruler text-xl text-gray-900"></i>راهنمای سایز</button>
+          <button class="text-blue-500 underline text-sm" data-modal="sizeGuideModal" onclick="showModal(event)"><i class="fa fa-ruler text-xl text-gray-900 pointer-events-none"></i>راهنمای سایز</button>
           <hr class="mt-6"/>
           <div>
             <button class="accordion-btn btn w-full inline-block flex justify-between p-4 py-8">لباس<i class="fa fa-angle-down"></i></button>
@@ -197,56 +251,98 @@
     </div>
   </div>
 
-  <!-- set Info Modal -->
-  <div class="modal py-16 px-8 rounded-lg setinfo-modal w-4/6 md:w-10/12 sm:p-4" id="setInfoModal">
-    <button class="close-modal-btn right-8 top-8"><i class="fa fa-times"></i></button>
-
-    <div class="flex gap-12 sm:flex-col sm:overflow-y-scroll sm:max-h-[90vh]">
-      <a href="#" class="w-5/12 sm:w-full">
-        <img src="assets/img/sets/set-1.jpg" alt="" class="w-full">
-      </a>
-
-      <div class="w-7/12 sm:w-full">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
+  <!-- Size selection guide -->
+  <div class="modal p-0 w-7/12 xl:w-10/12 lg:w-11/12" id="sizeGuideModal">
+    <div class="flex flex-col">
+      <div class="close-modal-btn "><i class="fa fa-times"></i></div>
+      <div class="max-h-[90vh] overflow-y-scroll">
+        <div>
+          <div class="flex sm:flex-col-reverse">
+            <div class="w-1/2 sm:w-full bg-gray-100 lg:px-4 sm:py-6 flex items-center justify-center">
+              <div class="bg-white shadow-md p-6">
+                <h1 class="text-xl">پیراهن ساده مردانه 21204</h1>
+                <hr class="my-4">
+                <p class="text-2xs">مدل با قد 185 سانتی‌متر و وزن 75 کیلوگرم سایز M را پوشیده است</p>
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="slide 2" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
+            <div class="flex w-1/2 sm:w-full">
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--2.jpg" alt="">
               </div>
-            </div>
 
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="slide 3" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/shirt/shirt-2--2--modal--4.jpg" alt="slide 4" />
-              <div class="text-center text-xs text-gray-900 space-y-1 pt-4">
-                <h1>پولوشرت مردانه 93102</h1>
-                <p>1,200,000 تومان</p>
+              <div>
+                <img src="assets/img/shirt/shirt-2--2--modal--3.jpg" alt="">
               </div>
             </div>
           </div>
 
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
+          <div class="tab-navigation flex flex-col px-4 pt-8 pb-4">
+            <div class="flex w-8/12 md:w-10/12 sm:w-full mx-auto">
+              <button class="tab-btn btn btn--md btn--secondary border-0 border-b-2 flex-grow active">جدول سایز</button>
+              <button class="tab-btn btn btn--md btn--secondary border-0 border-b-2 flex-grow">روش اندازه گیری</button>
+            </div>
 
-        <a href="#" class="btn btn--md mt-4 btn--primary block mx-auto max-w-[10rem]">خرید</a>
+            <div class="pt-4">
+              <div class="tab-item active">
+                <div class="text-sm font-medium pt-4">
+                  <p>لطفا طبق روش اندازه گیری ارائه شده سایز مناسب خود را از جدول زیر انتخاب نمایید</p>
+                  <ul class="leading-7">
+                    <li class="list-disc list-inside">اندازه های ارائه شده در جدول زیر +/- ۱ سانتی متر دارای خطا می باشد</li>
+                    <li class="list-disc list-inside">تمامی اندازه ها به سانتی متر می باشد</li>
+                  </ul>
+                  <hr class="my-4">
+                  <table class="w-full table-bordered">
+                    <thead>
+                    <tr>
+                      <th>سایز</th>
+                      <th>عرض سینه</th>
+                      <th>عرض کمر </th>
+                      <th>طول لباس</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <th>M</th>
+                      <td>52</td>
+                      <td>51</td>
+                      <td>76</td>
+                    </tr>
+                    <tr>
+                      <th>L</th>
+                      <td>54</td>
+                      <td>53</td>
+                      <td>77</td>
+                    </tr>
+                    <tr>
+                      <th>XL</th>
+                      <td>56</td>
+                      <td>55</td>
+                      <td>77</td>
+                    </tr>
+                    <tr>
+                      <th>XXL</th>
+                      <td>58</td>
+                      <td>57</td>
+                      <td>78</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div>
+                  <p class="text-sm">لطفا طبق تصویر زیر اندازه ها را به دست آورید . سپس با مقایسه اندازه های خود با جدول سایز ارائه شده، سایز مناسب خود را انتخاب نمایید.</p>
+
+                  <div class="w-full">
+                    <img src="assets/img/shirt/shirt-guide.jpg" alt="" class="w-full">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -255,6 +351,41 @@
   <div class="flex flex-col relative flex flex-col" id="navigation">
     <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
       <span>ارسال رایگان برای سفارش های بالای 500 هزار تومان <a href="#" class="underline" target="_blank">مشاهده جزئیات</a></span>
+    </div>
+
+    <div class="mobile-menu xs:px-4 pt-16 hidden md:block select-none shadow-2xl" id="mobileMenu">
+      <div class="flex items-center close-modal-btn gap-2 right-7 xs:right-3">
+        <button class="flex items-center pointer-events-none"><i class="fa fa-times"></i></button>
+        <span class="pointer-events-none text-base">بستن منو</span>
+      </div>
+      <ul class="divide-gray-200 divide-solid divide-y">
+        <div class="space-y-2">
+          <li class="flex border-solid border border-gray-900">
+            <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
+            <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
+          </li>
+
+          <li class="cursor-pointer flex items-center gap-2 group btn btn-md btn--primary p-2" data-modal="userAccountModal" onclick="showModal(event)">
+            <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+            <span class="pointer-events-none">ثبت نام / ورود</span>
+          </li>
+        </div>
+        <li class=" py-4"><a href="#">لباس</a></li>
+        <li class=" py-4"><a href="#">کفش</a></li>
+        <li>
+          <button class="btn--icon justify-between accordion-btn w-full py-4">اکسسوری<i class="fa fa-angle-down"></i></button>
+          <div class="acc-panel transition-all">
+            <ul class="pr-4 space-y-6 py-2 mt-4 bg-gray-100">
+              <li><a href="#">لباس</a></li>
+              <li><a href="#">کفش</a></li>
+              <li><a href="#">تخفیف ها</a></li>
+              <li><a href="#">فروشگاه حضوری</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class=" py-4"><a href="#">تخفیف ها</a></li>
+        <li class=" py-4"><a href="#">فروشگاه حضوری</a></li>
+      </ul>
     </div>
 
     <nav class="self-center w-full">
@@ -294,41 +425,6 @@
             <li class="navigation-item"><a href="#">تخفیف ها</a></li>
             <li class="navigation-item"><a href="#">فروشگاه حضوری</a></li>
           </ul>
-
-          <div class="mobile-menu xs:px-4 pt-16 hidden md:block select-none shadow-2xl" id="mobileMenu">
-            <div class="flex items-center close-modal-btn gap-2 right-7 xs:right-3">
-              <button class="flex items-center pointer-events-none"><i class="fa fa-times"></i></button>
-              <span class="pointer-events-none text-base">بستن منو</span>
-            </div>
-            <ul class="divide-gray-200 divide-solid divide-y">
-              <div class="space-y-2">
-                <li class="flex border-solid border border-gray-900">
-                  <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
-                  <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
-                </li>
-
-                <li class="cursor-pointer flex items-center gap-2 group btn btn-md btn--primary p-2" data-modal="userAccountModal" onclick="showModal(event)">
-                  <i class="pointer-events-none text-xl fa fa-user-plus"></i>
-                  <span class="pointer-events-none">ثبت نام / ورود</span>
-                </li>
-              </div>
-              <li class=" py-4"><a href="#">لباس</a></li>
-              <li class=" py-4"><a href="#">کفش</a></li>
-              <li>
-                <button class="btn--icon justify-between accordion-btn w-full py-4">اکسسوری<i class="fa fa-angle-down"></i></button>
-                <div class="acc-panel transition-all">
-                  <ul class="pr-4 space-y-6 py-2 mt-4 bg-gray-100">
-                    <li><a href="#">لباس</a></li>
-                    <li><a href="#">کفش</a></li>
-                    <li><a href="#">تخفیف ها</a></li>
-                    <li><a href="#">فروشگاه حضوری</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class=" py-4"><a href="#">تخفیف ها</a></li>
-              <li class=" py-4"><a href="#">فروشگاه حضوری</a></li>
-            </ul>
-          </div>
         </div>
 
         <div class="flex">
