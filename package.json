@@ -15,6 +15,7 @@
   "devDependencies": {
     "@snowpack/plugin-postcss": "^1.4.3",
     "@tailwindcss/jit": "^0.1.18",
+    "@tailwindcss/line-clamp": "^0.2.1",
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
     "prettier": "2.3.2",

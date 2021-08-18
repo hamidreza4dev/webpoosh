@@ -44,8 +44,12 @@ function showModal(event, data) {
   document.body.classList.add('modal-open');
 
   // close btn
-  const closeModalBtn = targetModalEl.querySelector('.close-modal-btn');
-  closeModalBtn.addEventListener('click', closeModal, { once: true });
+  const closeModalBtn = targetModalEl.querySelectorAll('.close-modal-btn');
+  if (closeModalBtn.length) {
+    closeModalBtn.forEach(item => {
+      item.addEventListener('click', closeModal, { once: true });
+    });
+  }
   overlay.addEventListener('click', closeModal, { once: true });
 
   // Escape Kay
@@ -170,16 +174,18 @@ navigationItem.forEach(item => {
 });
 
 // sticky navigation
-const navOffset = nav.offsetTop;
-window.addEventListener('scroll', function () {
-  if (window.pageYOffset >= navOffset) {
-    nav.classList.add('sticky');
-    hoverOverlay.style.top = nav.clientHeight + 'px';
-  } else {
-    nav.classList.remove('sticky');
-    hoverOverlay.style.top = navigation.clientHeight + 'px';
-  }
-});
+if (nav) {
+  const navOffset = nav.offsetTop;
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset >= navOffset) {
+      nav.classList.add('sticky');
+      hoverOverlay.style.top = nav.clientHeight + 'px';
+    } else {
+      nav.classList.remove('sticky');
+      hoverOverlay.style.top = navigation.clientHeight + 'px';
+    }
+  });
+}
 
 // product btn
 const productBtn = document.querySelectorAll('.product-btn');

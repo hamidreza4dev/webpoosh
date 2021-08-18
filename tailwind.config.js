@@ -11,6 +11,12 @@ module.exports = {
     './dist/search.html',
     './dist/product-details.html',
     './dist/set-details.html',
+    './dist/blog.html',
+    './dist/profile-pages/profile-order.html',
+    './dist/profile-pages/profile-undo.html',
+    './dist/profile-pages/profile-size.html',
+    './dist/profile-pages/profile-reset-password.html',
+    './dist/profile-pages/profile-address.html',
     './dist/js/script.js',
   ],
   darkMode: false, // or 'media' or 'class'
@@ -116,5 +122,5 @@ module.exports = {
       ringWidth: ['focus'],
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp')],
 };

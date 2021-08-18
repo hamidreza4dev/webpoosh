@@ -117,7 +117,15 @@
 
       th,
       td {
-        @apply border-r border-b border-gray-300 border-solid;
+        @apply border-r border-b border-gray-300 border-solid p-4;
+      }
+    }
+
+    .thead-dark {
+      tr {
+        th {
+          @apply bg-gray-900 text-white;
+        }
       }
     }
   }
@@ -278,19 +286,19 @@
 
   /* pagination */
   .pagination {
-    @apply flex items-center;
+    @apply flex items-center flex-row-reverse justify-center;
   }
 
   .pagination li {
-    @apply border-gray-600 border-l border-t border-b border-solid hover:bg-gray-200 text-center w-12;
+    @apply border-gray-600 border-l border-t border-b border-solid hover:bg-gray-200 text-center w-12 cursor-pointer;
   }
 
   .pagination li:first-child {
-    @apply rounded-r-lg border-r;
+    @apply rounded-l-lg;
   }
 
   .pagination li:last-child {
-    @apply rounded-l-lg;
+    @apply rounded-r-lg border-r;
   }
 
   .pagination li.active {
@@ -737,6 +745,17 @@
             @apply h-full object-contain object-center md:w-screen;
           }
         }
+      }
+    }
+  }
+
+  main.profile {
+    .sidebar-item {
+      @apply transition-colors text-sm flex items-center gap-2 py-2 px-4;
+
+      &:hover,
+      &.active {
+        @apply bg-gray-200;
       }
     }
   }
