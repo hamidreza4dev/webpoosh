@@ -12,6 +12,7 @@ module.exports = {
     './dist/product-details.html',
     './dist/set-details.html',
     './dist/blog.html',
+    './dist/blog-page.html',
     './dist/profile-pages/profile-order.html',
     './dist/profile-pages/profile-undo.html',
     './dist/profile-pages/profile-size.html',

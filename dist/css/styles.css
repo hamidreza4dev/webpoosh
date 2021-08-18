@@ -2597,6 +2597,41 @@ main.profile .sidebar-item:hover, main.profile .sidebar-item.active {
 	--tw-bg-opacity: 1;
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
+.blog-page p {
+	text-align: justify;
+}
+.blog-page p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.blog-page p {
+	line-height: 2rem;
+}
+.blog-page p {
+	--tw-text-opacity: 1;
+	color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+.blog-page h1 {
+	margin-bottom: 0.5rem;
+}
+.blog-page h1 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+.blog-page img:not(.blog-post-banner) {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+main.weblog .blog-feed > div:not(:first-child) {
+	border-top-width: 1px;
+}
+main.weblog .blog-feed > div:not(:first-child) {
+	border-style: solid;
+}
+main.weblog .blog-feed > div:not(:first-child) {
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
 .pointer-events-none {
 	pointer-events: none;
 }
@@ -2665,6 +2700,10 @@ main.profile .sidebar-item:hover, main.profile .sidebar-item.active {
 .my-8 {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+.my-24 {
+	margin-top: 6rem;
+	margin-bottom: 6rem;
 }
 .mb-4 {
 	margin-bottom: 1rem;
@@ -3161,13 +3200,13 @@ main.profile .sidebar-item:hover, main.profile .sidebar-item.active {
 	--tw-border-opacity: 1;
 	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
-.border-orange-300 {
-	--tw-border-opacity: 1;
-	border-color: rgba(253, 186, 116, var(--tw-border-opacity));
-}
 .border-gray-300 {
 	--tw-border-opacity: 1;
 	border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+}
+.border-orange-300 {
+	--tw-border-opacity: 1;
+	border-color: rgba(253, 186, 116, var(--tw-border-opacity));
 }
 .bg-gray-100 {
 	--tw-bg-opacity: 1;
@@ -3282,6 +3321,10 @@ main.profile .sidebar-item:hover, main.profile .sidebar-item.active {
 .px-40 {
 	padding-left: 10rem;
 	padding-right: 10rem;
+}
+.py-6 {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 .pt-8 {
 	padding-top: 2rem;
@@ -3753,6 +3796,10 @@ main.profile .sidebar-item:hover, main.profile .sidebar-item.active {
 		width: 100%;
 	}
 
+	.md\:w-1\/12 {
+		width: 8.333333%;
+	}
+
 	.md\:max-w-lg {
 		max-width: 32rem;
 	}
@@ -3826,16 +3873,16 @@ main.profile .sidebar-item:hover, main.profile .sidebar-item.active {
 		width: 100%;
 	}
 
+	.sm\:w-8\/12 {
+		width: 66.666667%;
+	}
+
 	.sm\:w-10\/12 {
 		width: 83.333333%;
 	}
 
 	.sm\:w-11\/12 {
 		width: 91.666667%;
-	}
-
-	.sm\:w-8\/12 {
-		width: 66.666667%;
 	}
 
 	.sm\:grid-cols-1 {

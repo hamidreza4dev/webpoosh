@@ -759,4 +759,26 @@
       }
     }
   }
+
+  .blog-page {
+    p {
+      @apply text-gray-600 text-base leading-8 text-justify;
+    }
+
+    h1 {
+      @apply text-2xl mb-2;
+    }
+
+    img:not(.blog-post-banner) {
+      @apply my-12;
+    }
+  }
+
+  main.weblog {
+    .blog-feed {
+      > div:not(:first-child) {
+        @apply border-t border-solid border-gray-200;
+      }
+    }
+  }
 }
