@@ -107,6 +107,15 @@
     @apply mb-4;
   }
 
+  input,
+  textarea,
+  button,
+  select,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: 0;
+  }
+
   table.table-bordered {
     @apply border border-gray-300 border-solid text-center;
 
@@ -548,10 +557,10 @@
     }
 
     .footer-info {
-      @apply flex justify-between;
+      @apply flex justify-between sm:flex-col sm:text-center;
 
       ul {
-        @apply flex text-s;
+        @apply flex text-s sm:justify-center sm:mb-4;
       }
 
       .footer-copyright {
