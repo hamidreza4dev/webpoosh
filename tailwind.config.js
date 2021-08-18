@@ -13,6 +13,7 @@ module.exports = {
     './dist/set-details.html',
     './dist/blog.html',
     './dist/blog-page.html',
+    './dist/in-person-store.html',
     './dist/profile-pages/profile-order.html',
     './dist/profile-pages/profile-undo.html',
     './dist/profile-pages/profile-size.html',
