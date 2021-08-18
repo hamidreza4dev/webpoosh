@@ -58,7 +58,7 @@
   </div>
 
   <!-- product modal -->
-  <div class="modal product-modal product-swiper lg:w-screen lg:h-screen lg:overflow-y-scroll" id="productModal">
+  <div class="modal product-modal product-swiper lg:w-screen lg:max-h-[95vh] lg:overflow-y-scroll" id="productModal">
     <div class="flex lg:grid lg:grid-cols-[70vh 1fr 0fr]">
       <div class="close-modal-btn right-8 top-2 z-10"><i class="fa fa-times"></i></div>
       <div class="swiper-container gallery-thumbs lg:hidden">
@@ -79,7 +79,7 @@
       </div>
 
       <div class="swiper-container gallery-top lg:w-full">
-        <div class="swiper-wrapper lg:h-[600px]">
+        <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="assets/img/shirt/shirt-2--2--modal--1.jpg" alt="slide 1" />
           </div>
@@ -557,10 +557,10 @@
     </div>
 
     <div class="flex-1">
-      <div class="bg-gray-50 p-12">
+      <div class="bg-gray-50 p-12 sm:p-4">
         <div class="flex border-solid border border-gray-900">
-          <input type="text" class="border-0 flex-auto focus:ring-0 text-gray-900" placeholder="کد تخفیف را وارد کنید">
-          <button class="btn--primary transition text-white px-8">اعمال کد</button>
+          <input type="text" class="border-0 flex-auto focus:ring-0 text-gray-900 sm:w-8/12" placeholder="کد تخفیف را وارد کنید">
+          <button class="btn--primary transition text-white px-8 sm:whitespace-nowrap">اعمال کد</button>
         </div>
 
         <div class="">
