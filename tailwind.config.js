@@ -2,25 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: process.env.NODE_ENV ? 'jit' : undefined,
-  purge: [
-    './dist/index.html',
-    './dist/components.html',
-    './dist/products.html',
-    './dist/cart.html',
-    './dist/sets.html',
-    './dist/search.html',
-    './dist/product-details.html',
-    './dist/set-details.html',
-    './dist/blog.html',
-    './dist/blog-page.html',
-    './dist/in-person-store.html',
-    './dist/profile-pages/profile-order.html',
-    './dist/profile-pages/profile-undo.html',
-    './dist/profile-pages/profile-size.html',
-    './dist/profile-pages/profile-reset-password.html',
-    './dist/profile-pages/profile-address.html',
-    './dist/js/script.js',
-  ],
+  purge: ['./dist/**.html', './dist/**/**.html', './dist/js/script.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {

@@ -328,3 +328,17 @@ const highSellProductsSlider = new Swiper('.high-sell-product-slider', {
     },
   },
 });
+
+// form check
+const allInputs = document.querySelectorAll('input, textarea');
+allInputs.forEach(item => {
+  if (item.getAttribute('data-err')) {
+    item.addEventListener('invalid', () => {
+      if (item.value) {
+        item.setCustomValidity('');
+      } else {
+        item.setCustomValidity(item.getAttribute('data-err'));
+      }
+    });
+  }
+});
