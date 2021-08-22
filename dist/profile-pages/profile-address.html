@@ -120,6 +120,90 @@
   </div>
 </div>
 
+<!-- address modal -->
+<div class="modal w-1/2 lg:w-8/12 md:w-10/12 sm:w-11/12 max-h-[90vh] overflow-y-scroll" id="editAddressModal">
+  <button class="close-modal-btn"><i class="fa fa-times"></i></button>
+  <h1 class="text-2xl sm:text-xl font-bold text-center absolute top-8 right-1/2 translate translate-x-1/2">ویرایش آدرس</h1>
+  <div class="pt-8">
+    <form>
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-1">
+        <label class="block col-span-full">
+          <span class="input--label">نام و نام خانوادگی تحویل گیرنده *</span>
+          <input type="text" class="form-input mt-1 block w-full" value="محمدرضا" required data-err="لطفا نام و نام خوانوادگی خود را وارد کنید">
+        </label>
+
+        <label class="block">
+          <span class="input--label">شماره موبایل *</span>
+          <input type="number" class="form-input mt-1 block w-full" value="09123456789" required data-err="لطفا شماره موبایل خود را به درستی وارد کنید">
+        </label>
+
+        <label class="block">
+          <span class="input--label">کد پستی *</span>
+          <input type="number" class="form-input mt-1 block w-full" value="09123456789" required data-err="لطفا کد پستی خود را وارد کنید">
+        </label>
+
+        <label class="block">
+          <span class="input--label">استان</span>
+          <select name="" class="form-input mt-1 block w-full" id="selectState">
+            <option value="0">-- لطفا استان را انتخاب نمایید --</option>
+            <option value="1">تهران</option>
+            <option value="2">گیلان</option>
+            <option value="3">آذربایجان شرقی</option>
+            <option value="4">خوزستان</option>
+            <option value="5">فارس</option>
+            <option value="6">اصفهان</option>
+            <option value="7">خراسان رضوی</option>
+            <option value="8">قزوین</option>
+            <option value="9">سمنان</option>
+            <option value="10">قم</option>
+            <option value="11">مرکزی</option>
+            <option value="12">زنجان</option>
+            <option value="13">مازندران</option>
+            <option value="14">گلستان</option>
+            <option value="15">اردبیل</option>
+            <option value="16">آذربایجان غربی</option>
+            <option value="17">همدان</option>
+            <option value="18">کردستان</option>
+            <option value="19">کرمانشاه</option>
+            <option value="20">لرستان</option>
+            <option value="21">بوشهر</option>
+            <option value="22">کرمان</option>
+            <option value="23">هرمزگان</option>
+            <option value="24">چهارمحال و بختیاری</option>
+            <option value="25">یزد</option>
+            <option value="26">سیستان و بلوچستان</option>
+            <option value="27">ایلام</option>
+            <option value="28">کهگلویه و بویراحمد</option>
+            <option value="29">خراسان شمالی</option>
+            <option value="30">خراسان جنوبی</option>
+            <option value="31">البرز</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="input--label">شهر</span>
+          <select name="" class="form-input mt-1 block w-full" id="selectCities">
+            <option value="null">-- لطفا شهر را انتخاب نمایید --</option>
+          </select>
+        </label>
+
+
+        <label class="block col-span-full">
+          <span class="input--label">آدرس پستی *</span>
+          <textarea rows="6" class="form-input mt-1 block w-full" required data-err="آدرس خود را وارد کنید"
+                    placeholder="آدرس تحویل گیرنده را وارد نمایید"></textarea>
+        </label>
+      </div>
+
+      <div class="flex gap-4 mt-8">
+        <button type="button" class="btn btn--md btn--secondary block w-full xs:btn--sm close-modal-btn static">انصراف
+        </button>
+        <button type="submit" class="btn btn--md btn--primary block w-full xs:btn--sm">ثبت آدرس</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 
 <!-- login modal -->
 <div class="modal tab-navigation w-1/4 xl:w-2/6 lg:w-2/4 md:w-5/6 lg:overflow-x-hidden" id="userAccountModal">
@@ -683,7 +767,7 @@
         </div>
         <hr class="my-4">
         <div class="text-base flex flex-row-reverse justify-between items-center">
-          <button class="btn btn--sm btn--primary" data-modal="addressModal" onclick="showModal(event)">ویرایش</button>
+          <button class="btn btn--sm btn--primary" data-modal="editAddressModal" onclick="showModal(event)">ویرایش</button>
           <p>تلفن همراه : <span>09123456789</span></p>
         </div>
       </div>
@@ -701,7 +785,7 @@
         </div>
         <hr class="my-4">
         <div class="text-base flex flex-row-reverse justify-between items-center">
-          <button class="btn btn--sm btn--primary" data-modal="addressModal" onclick="showModal(event)">ویرایش</button>
+          <button class="btn btn--sm btn--primary" data-modal="editAddressModal" onclick="showModal(event)">ویرایش</button>
           <p>تلفن همراه : <span>09123456789</span></p>
         </div>
       </div>

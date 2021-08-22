@@ -283,6 +283,9 @@ const galleryTop = new Swiper('main.product-details .gallery-top', {
 const headerSlider = new Swiper('.header-slider', {
   grabCursor: true,
   loop: true,
+  autoplay: {
+    delay: 2500,
+  },
 });
 
 const newProductsSlider = new Swiper('.new-product-slider', {
