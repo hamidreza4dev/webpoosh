@@ -595,6 +595,13 @@
         max-width: 85%;
       }
     }
+
+    @media only screen and (max-width: 360px) {
+      & {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 
   /* product modal */
