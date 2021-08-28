@@ -16,31 +16,31 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="font-farsi overflow-x-hidden">
+<body class="overflow-x-hidden font-farsi">
   <div class="overlay"></div>
   <div class="hover-overlay"></div>
 
   <!-- logOut modal -->
-  <div class="modal w-3/12 p-4 lg:w-4/6 sm:w-10/12" id="logoutModal">
+  <div class="w-3/12 p-4 modal lg:w-4/6 sm:w-10/12" id="logoutModal">
     <div>
       <h1 class="text-2xl">خروج از سایت</h1>
-      <p class="text-sm text-gray-700 mt-2">ایا میخواهید از پروفایل خود خارج شوید ؟</p>
+      <p class="mt-2 text-sm text-gray-700">ایا میخواهید از پروفایل خود خارج شوید ؟</p>
 
-      <div class="mt-8 flex">
+      <div class="flex mt-8">
         <button
-          class="flex-grow btn btn--sm btn--primary border-2 border-gray-900 border-solid close-modal-btn static">انصراف</button>
+          class="static flex-grow border-2 border-gray-900 border-solid btn btn--sm btn--primary close-modal-btn">انصراف</button>
         <button class="flex-grow btn btn--sm btn--secondary">خروج</button>
       </div>
     </div>
   </div>
 
   <!-- login modal -->
-  <div class="modal tab-navigation w-1/4 xl:w-2/6 lg:w-2/4 md:w-5/6 lg:overflow-x-hidden" id="userAccountModal">
+  <div class="w-1/4 modal tab-navigation xl:w-2/6 lg:w-2/4 md:w-5/6 lg:overflow-x-hidden" id="userAccountModal">
     <button class="close-modal-btn"><i class="fa fa-times"></i></button>
 
-    <div class="tabs flex">
-      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2 xs:btn--sm active">ورود</button>
-      <button class="tab-btn flex-auto btn btn--md btn--secondary border-0 border-b-2 xs:btn--sm">ثبت نام</button>
+    <div class="flex tabs">
+      <button class="flex-auto border-0 border-b-2 tab-btn btn btn--md btn--secondary xs:btn--sm active">ورود</button>
+      <button class="flex-auto border-0 border-b-2 tab-btn btn btn--md btn--secondary xs:btn--sm">ثبت نام</button>
     </div>
 
     <div class="pt-8">
@@ -48,18 +48,18 @@
         <form>
           <label class="block mb-4">
             <span class="input--label">شماره تلفن همران</span>
-            <input type="number"  class="form-input mt-1 block w-full text-left" style="direction: ltr"
+            <input type="number"  class="block w-full mt-1 text-left form-input" style="direction: ltr"
                    placeholder="۹۱۲ ۰۰۰ ۰۰۰۰" required data-err="لطفا شماره موبایل خود را وارد کنید">
           </label>
 
           <label class="block mb-4">
             <span class="input--label">رمز عبور</span>
-            <input type="password"  style="direction: ltr" class="form-input mt-1 block w-full" required data-err="لطفا رمز عبور خودتان را وارد کنید">
+            <input type="password"  style="direction: ltr" class="block w-full mt-1 form-input" required data-err="لطفا رمز عبور خودتان را وارد کنید">
           </label>
 
-          <a href="#" class="text-blue-500 inline-block">رمز عبور خود را فراموش کرده ام</a>
+          <a href="#" class="inline-block text-blue-500">رمز عبور خود را فراموش کرده ام</a>
           <hr class="my-4" />
-          <button type="submit" class="btn btn--md btn--primary block w-full xs:btn--sm">ورود</button>
+          <button type="submit" class="block w-full btn btn--md btn--primary xs:btn--sm">ورود</button>
         </form>
       </div>
 
@@ -67,11 +67,11 @@
         <form>
           <label class="block mb-4">
             <span class="input--label">شماره تلفن همران</span>
-            <input type="number" class="form-input mt-1 block w-full text-left" style="direction: ltr"
+            <input type="number" class="block w-full mt-1 text-left form-input" style="direction: ltr"
                    placeholder="۹۱۲ ۰۰۰ ۰۰۰۰" required data-err="لطفا شماره موبایل خود را وارد کنید">
           </label>
           <hr class="my-4" />
-          <button type="submit" class="btn btn--md btn--primary block w-full">ثبت نام</button>
+          <button type="submit" class="block w-full btn btn--md btn--primary">ثبت نام</button>
         </form>
       </div>
     </div>
@@ -80,7 +80,7 @@
   <!-- product modal -->
   <div class="modal product-modal product-swiper lg:w-screen lg:h-screen lg:overflow-y-scroll" id="productModal">
     <div class="flex lg:grid lg:grid-cols-[70vh 1fr 0fr]">
-      <div class="close-modal-btn right-8 top-2 z-10"><i class="fa fa-times"></i></div>
+      <div class="z-10 close-modal-btn right-8 top-2"><i class="fa fa-times"></i></div>
       <div class="swiper-container gallery-thumbs lg:hidden">
         <div class="swiper-wrapper" style="align-items: center">
           <div class="swiper-slide">
@@ -116,9 +116,9 @@
       </div>
 
       <div class="flex flex-col">
-        <div class="product-content-inner overflow-y-scroll">
+        <div class="overflow-y-scroll product-content-inner">
           <h1 class="text-xl font-bold">پیراهن ساده مردانه 21204</h1>
-          <p class="text-2xs my-4">387,000 تومان</p>
+          <p class="my-4 text-2xs">387,000 تومان</p>
           <hr />
           <p class="mt-4 text-xs">رنگ انتخاب شده : <span class="font-bold">سرمه ای</span></p>
           <div class="selected-color">
@@ -144,7 +144,7 @@
 
           </div>
 
-          <div class="modal-product-size flex my-4">
+          <div class="flex my-4 modal-product-size">
             <label>
               <input type="radio" name="type-clothe" disabled />
               <span>M</span>
@@ -170,14 +170,14 @@
               <span>3Xl</span>
             </label>
           </div>
-          <button class="text-blue-500 underline text-sm" data-modal="sizeGuideModal" onclick="showModal(event)"><i
-              class="fa fa-ruler text-xl text-gray-900 pointer-events-none"></i>راهنمای سایز
+          <button class="text-sm text-blue-500 underline" data-modal="sizeGuideModal" onclick="showModal(event)"><i
+              class="text-xl text-gray-900 pointer-events-none fa fa-ruler"></i>راهنمای سایز
           </button>
           <hr class="mt-6" />
           <div>
-            <button class="accordion-btn btn w-full inline-block flex justify-between p-4 py-8">لباس<i
+            <button class="flex justify-between inline-block w-full p-4 py-8 accordion-btn btn">لباس<i
                 class="fa fa-angle-down"></i></button>
-            <div class="acc-panel transition-all">
+            <div class="transition-all acc-panel">
               <div class="p-6 pt-2 text-2xs">
                 <p>پیراهن آستین بلند مردانه، دارای یقه معمولی</p>
 
@@ -212,23 +212,23 @@
             </div>
           </div>
           <hr class="mb-4" />
-          <a href="#" class="my-4 w-full btn btn--md btn--secondary">مشاهده تمامی اطلاعات محصول</a>
+          <a href="#" class="w-full my-4 btn btn--md btn--secondary">مشاهده تمامی اطلاعات محصول</a>
         </div>
 
-        <a href="#" class="btn btn--md btn--tertiary w-full inline-block">افزودن به سبد خرید</a>
+        <a href="#" class="inline-block w-full btn btn--md btn--tertiary">افزودن به سبد خرید</a>
       </div>
     </div>
   </div>
 
   <!-- Size selection guide -->
-  <div class="modal p-0 w-7/12 xl:w-10/12 lg:w-11/12" id="sizeGuideModal">
+  <div class="w-7/12 p-0 modal xl:w-10/12 lg:w-11/12" id="sizeGuideModal">
     <div class="flex flex-col">
       <div class="close-modal-btn "><i class="fa fa-times"></i></div>
       <div class="max-h-[90vh] overflow-y-scroll">
         <div>
           <div class="flex sm:flex-col-reverse">
-            <div class="w-1/2 sm:w-full bg-gray-100 lg:px-4 sm:py-6 flex items-center justify-center">
-              <div class="bg-white shadow-md p-6">
+            <div class="flex items-center justify-center w-1/2 bg-gray-100 sm:w-full lg:px-4 sm:py-6">
+              <div class="p-6 bg-white shadow-md">
                 <h1 class="text-xl">پیراهن ساده مردانه 21204</h1>
                 <hr class="my-4">
                 <p class="text-2xs">مدل با قد 185 سانتی‌متر و وزن 75 کیلوگرم سایز M را پوشیده است</p>
@@ -246,15 +246,15 @@
             </div>
           </div>
 
-          <div class="tab-navigation flex flex-col px-4 pt-8 pb-4">
-            <div class="flex w-8/12 md:w-10/12 sm:w-full mx-auto">
-              <button class="tab-btn btn btn--md btn--secondary border-0 border-b-2 flex-grow active">جدول سایز</button>
-              <button class="tab-btn btn btn--md btn--secondary border-0 border-b-2 flex-grow">روش اندازه گیری</button>
+          <div class="flex flex-col px-4 pt-8 pb-4 tab-navigation">
+            <div class="flex w-8/12 mx-auto md:w-10/12 sm:w-full">
+              <button class="flex-grow border-0 border-b-2 tab-btn btn btn--md btn--secondary active">جدول سایز</button>
+              <button class="flex-grow border-0 border-b-2 tab-btn btn btn--md btn--secondary">روش اندازه گیری</button>
             </div>
 
             <div class="pt-4">
               <div class="tab-item active">
-                <div class="text-sm font-medium pt-4">
+                <div class="pt-4 text-sm font-medium">
                   <p>لطفا طبق روش اندازه گیری ارائه شده سایز مناسب خود را از جدول زیر انتخاب نمایید</p>
                   <ul class="leading-7">
                     <li class="list-disc list-inside">اندازه های ارائه شده در جدول زیر +/- ۱ سانتی متر دارای خطا می باشد
@@ -319,37 +319,37 @@
   </div>
 
   <!-- navigation -->
-  <div class="flex flex-col relative flex flex-col" id="navigation">
-    <div class="bg-orange-500 p-2.5 text-center text-white text-xs">
+  <div class="relative flex flex-col" id="navigation">
+    <div class="bg-gray-900 p-2.5 text-center text-white text-xs">
       <span>ارسال رایگان برای سفارش های بالای 500 هزار تومان <a href="#" class="underline" target="_blank">مشاهده
           جزئیات</a></span>
     </div>
 
-    <div class="mobile-menu xs:px-4 pt-16 hidden md:block select-none shadow-2xl" id="mobileMenu">
-      <div class="flex items-center close-modal-btn gap-2 right-7 xs:right-3">
+    <div class="hidden pt-16 shadow-2xl select-none mobile-menu xs:px-4 md:block" id="mobileMenu">
+      <div class="flex items-center gap-2 close-modal-btn right-7 xs:right-3">
         <button class="flex items-center pointer-events-none"><i class="fa fa-times"></i></button>
-        <span class="pointer-events-none text-base">بستن منو</span>
+        <span class="text-base pointer-events-none">بستن منو</span>
       </div>
-      <ul class="divide-gray-200 divide-solid divide-y">
+      <ul class="divide-y divide-gray-200 divide-solid">
         <div class="space-y-2">
-          <li class="flex border-solid border border-gray-900">
-            <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
-            <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
+          <li class="flex border border-gray-900 border-solid">
+            <input type="text" class="flex-auto border-0 focus:ring-0" placeholder="جستجو ...">
+            <button class="text-white transition btn--primary"><i class="px-2 text-2xl fa fa-search"></i></button>
           </li>
 
-          <li class="cursor-pointer flex items-center gap-2 group btn btn-md btn--primary p-2"
+          <li class="flex items-center gap-2 p-2 cursor-pointer group btn btn-md btn--primary"
             data-modal="userAccountModal" onclick="showModal(event)">
-            <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+            <i class="text-xl pointer-events-none fa fa-user-plus"></i>
             <span class="pointer-events-none">ثبت نام / ورود</span>
           </li>
         </div>
-        <li class=" py-4"><a href="#">لباس</a></li>
-        <li class=" py-4"><a href="#">کفش</a></li>
+        <li class="py-4 "><a href="#">لباس</a></li>
+        <li class="py-4 "><a href="#">کفش</a></li>
         <li>
-          <button class="btn--icon justify-between accordion-btn w-full py-4">اکسسوری<i
+          <button class="justify-between w-full py-4 btn--icon accordion-btn">اکسسوری<i
               class="fa fa-angle-down"></i></button>
-          <div class="acc-panel transition-all">
-            <ul class="pr-4 space-y-6 py-2 mt-4 bg-gray-100">
+          <div class="transition-all acc-panel">
+            <ul class="py-2 pr-4 mt-4 space-y-6 bg-gray-100">
               <li><a href="#">لباس</a></li>
               <li><a href="#">کفش</a></li>
               <li><a href="#">تخفیف ها</a></li>
@@ -357,19 +357,19 @@
             </ul>
           </div>
         </li>
-        <li class=" py-4"><a href="#">تخفیف ها</a></li>
-        <li class=" py-4"><a href="#">فروشگاه حضوری</a></li>
+        <li class="py-4 "><a href="#">تخفیف ها</a></li>
+        <li class="py-4 "><a href="#">فروشگاه حضوری</a></li>
       </ul>
     </div>
 
     <nav class="self-center w-full">
-      <div class="flex justify-between items-center container">
+      <div class="container flex items-center justify-between">
         <div class="hidden md:block" data-modal="mobileMenu" onclick="showModal(event)">
           <span class="text-3xl pointer-events-none"><i class="fa fa-bars"></i></span>
         </div>
 
         <div class="flex">
-          <a href="#" class="mx-5 p-2 inline-block xl:px-0 xl:mx-0 md:h-16 md:py-4">
+          <a href="#" class="inline-block p-2 mx-5 xl:px-0 xl:mx-0 md:h-16 md:py-4">
             <img src="assets/site/wp-logo.png" alt="site-logo" class="h-full">
           </a>
 
@@ -379,8 +379,8 @@
             <li class="navigation-item"><a href="#">کفش</a></li>
             <li class="navigation-item group"><a>اکسسوری</a>
               <div class="sub-menu group-hover:block">
-                <div class="justify-between flex container p-0">
-                  <ul class="font-bold text-2xs flex gap-4">
+                <div class="container flex justify-between p-0">
+                  <ul class="flex gap-4 font-bold text-2xs">
                     <div>
                       <li class=""><a href="#">ست</a></li>
                       <li class=""><a href="#">لباس</a></li>
@@ -407,12 +407,12 @@
 
             <div class="nav-drop-down group-hover:block">
               <div>
-                <div class="flex border-solid border border-gray-900">
-                  <input type="text" class="border-0 flex-auto focus:ring-0" placeholder="جستجو ...">
-                  <button class="btn--primary transition text-white"><i class="text-2xl px-2 fa fa-search"></i></button>
+                <div class="flex border border-gray-900 border-solid">
+                  <input type="text" class="flex-auto border-0 focus:ring-0" placeholder="جستجو ...">
+                  <button class="text-white transition btn--primary"><i class="px-2 text-2xl fa fa-search"></i></button>
                 </div>
 
-                <div class="space-y-3 pt-4">
+                <div class="pt-4 space-y-3">
                   <div class="flex">
                     <div class="w-2/6"><img src="assets/img/sets/set-5.jpg" alt="" class=""></div>
                     <div class="flex-grow px-4 space-y-3">
@@ -440,7 +440,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="btn btn--sm btn--primary block">مشاهده تمام محصولات</a>
+                  <a href="#" class="block btn btn--sm btn--primary">مشاهده تمام محصولات</a>
                 </div>
               </div>
             </div>
@@ -451,9 +451,9 @@
 
             <div class="nav-drop-down group-hover:block">
               <ul>
-                <li class="cursor-pointer flex items-center gap-2" data-modal="userAccountModal"
+                <li class="flex items-center gap-2 cursor-pointer" data-modal="userAccountModal"
                   onclick="showModal(event)">
-                  <i class="pointer-events-none text-xl fa fa-user-plus"></i>
+                  <i class="text-xl pointer-events-none fa fa-user-plus"></i>
                   <span class="pointer-events-none">ثبت نام / ورود</span>
                 </li>
               </ul>
@@ -463,14 +463,14 @@
           <div class="nav-action group">
             <a href="#" class="text-3xl xl:text-2xl"><i class="fa fa-shopping-bag"></i></a>
 
-            <div class="nav-drop-down group-hover:flex flex-col md:group-hover:hidden">
-              <div class="font-bold text-2xs flex justify-between">
+            <div class="flex-col nav-drop-down group-hover:flex md:group-hover:hidden">
+              <div class="flex justify-between font-bold text-2xs">
                 <h1>سبد خرید</h1>
                 <span>1,200,000</span>
               </div>
               <h1 class="text-xl font-bold">سبد خرید</h1>
-              <a href="" class="btn btn--md btn--tertiary flex-auto mt-4">جزئیات سبد خرید</a>
-              <p class="border-t border-b border-solid border-gray-400 py-8 my-12 text-center">سبد خرید شما خالیست !</p>
+              <a href="" class="flex-auto mt-4 btn btn--md btn--tertiary">جزئیات سبد خرید</a>
+              <p class="py-8 my-12 text-center border-t border-b border-gray-400 border-solid">سبد خرید شما خالیست !</p>
 
               <div>
                 <div class="grid grid-cols-3 gap-2">
@@ -487,7 +487,7 @@
                       </h2>
                       <p>1,200,000 تومان</p>
 
-                      <div class="text-xs text-gray-500 flex justify-between">
+                      <div class="flex justify-between text-xs text-gray-500">
                         <button>حذف</button>
                         <button data-modal="productModal" onclick="showModal(event)">ویرایش</button>
                       </div>
@@ -506,7 +506,7 @@
                       </h2>
                       <p>1,200,000 تومان</p>
 
-                      <div class="text-xs text-gray-500 flex justify-between">
+                      <div class="flex justify-between text-xs text-gray-500">
                         <button>حذف</button>
                         <button data-modal="productModal" onclick="showModal(event)">ویرایش</button>
                       </div>
@@ -525,7 +525,7 @@
                       </h2>
                       <p>1,200,000 تومان</p>
 
-                      <div class="text-xs text-gray-500 flex justify-between">
+                      <div class="flex justify-between text-xs text-gray-500">
                         <button>حذف</button>
                         <button data-modal="productModal" onclick="showModal(event)">ویرایش</button>
                       </div>
@@ -540,7 +540,7 @@
     </nav>
   </div>
 
-  <ul class="breadcrumb bg-gray-100 w-full p-3 container">
+  <ul class="container w-full p-3 bg-gray-100 breadcrumb">
     <li class="text-sm transition-colors hover:text-gray-500"><a href="#">وب پوش</a></li>
     <i class="breadcrumb-icon fa fa-angle-left"></i>
     <li class="text-sm transition-colors hover:text-gray-500"><a href="#">محصولات</a></li>
@@ -549,9 +549,9 @@
   </ul>
 
   <!--main-->
-  <main class="container px-0 profile flex md:flex-col">
+  <main class="container flex px-0 profile md:flex-col">
     <div class="w-1/5 md:w-full">
-      <div class="bg-gray-100 pt-8">
+      <div class="pt-8 bg-gray-100">
         <div class="flex flex-col items-center">
           <span class="text-9xl"><i class="fa fa-user-circle"></i></span>
           <h1 class="text-2xl font-bold">محمدرضا</h1>
@@ -570,13 +570,13 @@
           <li><a href="profile-pages/profile-reset-password.html" class="sidebar-item"><i class="text-3xl fa fa-lock-open"></i>تغییر
               رمز عبور</a></li>
           <li class="cursor-pointer" data-modal="logoutModal" onclick="showModal(event)"><a href="#"
-              class="sidebar-item pointer-events-none"><i class="text-3xl fa fa-times-circle"></i>خروج</a></li>
+              class="pointer-events-none sidebar-item"><i class="text-3xl fa fa-times-circle"></i>خروج</a></li>
         </ul>
       </div>
     </div>
 
     <div class="w-4/5 md:w-full p-20 lg:p-4 md:max-w-[100vw] md:overflow-x-scroll">
-      <div class="bg-orange-100 p-4 rounded-md border border-orange-300">
+      <div class="p-4 bg-orange-100 border border-orange-300 rounded-md">
         <p>شما می توانید سفارشاتی را که از زمان تحویل آنها کمتر از 10 روز گذشته است را مرجوع نمایید. در غیر این صورت در
           این لیست نمایش داده نخواهند شد.</p>
       </div>
@@ -584,9 +584,9 @@
   </main>
 
   <!-- footer -->
-  <footer class="bg-orange-500 py-8 text-white">
-    <div class="footer-inner container">
-      <div class="footer-images  lg:order-1">
+  <footer class="py-8 text-white bg-gray-900">
+    <div class="container footer-inner">
+      <div class="footer-images lg:order-1">
         <img src="assets/site/logo_2.svg" alt="" />
         <img src="assets/site/enamad.png" alt="" />
       </div>
@@ -621,9 +621,9 @@
       <div class="join-blog lg:order-2 sm:flex sm:flex-col sm:items-center">
         <h6 class="footer-title">ثبت ایمیل در خبرنامه</h6>
 
-        <div class="flex border-solid border border-gray-900">
-          <input type="text" class="border-0 flex-auto focus:ring-0 text-gray-900" placeholder="آدرس ایمیل شما">
-          <button class="btn--primary transition text-white px-8">ثبت</button>
+        <div class="flex border border-gray-900 border-solid">
+          <input type="text" class="flex-auto text-gray-900 border-0 focus:ring-0" placeholder="آدرس ایمیل شما">
+          <button class="px-8 text-white transition btn--primary">ثبت</button>
         </div>
 
         <p class="mt-4">از جدیدترین محصولات و تخفیف‌ها با خبر شوید</p>
@@ -652,8 +652,8 @@
         </div>
       </div>
     </div>
-    <hr class="my-4 container">
-    <div class="footer-info container">
+    <hr class="container my-4">
+    <div class="container footer-info">
       <ul>
         <li><a href="#">وبلاگ</a></li>
         &nbsp;|&nbsp;
