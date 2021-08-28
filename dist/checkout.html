@@ -627,7 +627,7 @@
       <div>
         <form class="space-y-2" id="infoForm">
           <div class="accordion-item">
-            <button class="btn btn--md btn--secondary w-full text-right active">1. اطلاعات کاربر</button>
+            <button class="btn btn--md btn--secondary w-full text-right">1. اطلاعات کاربر</button>
             <div class="acc-panel transition-all">
               <div class="py-4 px-2">
                 <button class="btn btn--sm btn--primary" data-modal="userAccountModal" onclick="showModal(event)">لطفا ابتدا وارد وبسایت شوید</button>
@@ -891,7 +891,6 @@
 
     accordionStep.forEach(item => {
       item.firstElementChild.addEventListener('click', () => {
-        item.firstElementChild.classList.toggle('active');
         const panel = item.firstElementChild.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
@@ -906,9 +905,6 @@
     // set all panels to deActive
     function toggleAllAccPanels() {
       const panels = document.querySelectorAll('.acc-panel');
-      accordionStep.forEach(item => {
-        item.firstElementChild.classList.remove('active');
-      });
       panels.forEach(acc => {
         acc.style.maxHeight = null;
       });
