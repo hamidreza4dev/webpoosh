@@ -583,7 +583,7 @@
   }
 
   .mobile-menu {
-    @apply bg-white shadow-md p-8 fixed right-0 top-0 min-h-screen z-50 transform transition-transform translate-x-full invisible;
+    @apply bg-white shadow-md p-8 fixed right-0 top-0 min-h-screen z-50 transform transition-all translate-x-full invisible;
     max-width: 70%;
 
     &.active {
