@@ -365,22 +365,28 @@
               <p>به نام محمد زمردیان واریز کنید</p>
               <p>این سفارش به مدت دو ساعت برای شما رزرو شده است . برای نهایی کردن سفارش و ثبت پرداخت ، از فرم زیر استفاده کنید</p>
             </div>
-            <form action="" class="flex gap-4 my-8 justify-center items-end">
-              <label class="block">
-                <span class="input--label">کد رهگیری</span>
-                <input type="text" class="form-input mt-1 block w-full">
-              </label>
+            <form action="" class="flex gap-4 flex-col items-center my-8 items-end" id="orderInput">
+              <div class="flex gap-4">
+                <label class="block">
+                  <span class="input--label">کد رهگیری</span>
+                  <input type="text" class="form-input mt-1 block w-full">
+                </label>
 
-              <label class="block">
-                <span class="input--label">مبلغ</span>
-                <input type="number" class="form-input mt-1 block w-full">
-              </label>
+                <label class="block">
+                  <span class="input--label">مبلغ</span>
+                  <input type="number" class="form-input mt-1 block w-full">
+                </label>
 
-              <button type="submit" class="btn btn--sm btn--primary py-2"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn--sm btn--primary !bg-red-600 !ring-red-200 h-[2.6rem] mt-auto !opacity-0"><i class="fa fa-minus pointer-events-none"></i></button>
+              </div>
             </form>
 
-            <div class="flex justify-center">
-              <button class="btn btn--sm btn--primary">ثبت فیش های واریزی</button>
+
+            <div class="flex justify-center ">
+              <div class="space-y-2">
+                <button type="submit" class="btn btn--sm btn--primary !block w-full" id="addOrderInput">اضافه کردن فیلد</button>
+                <button class="btn btn--sm btn--primary !block w-full">ثبت فیش های واریزی</button>
+              </div>
             </div>
             <hr class="my-4">
 

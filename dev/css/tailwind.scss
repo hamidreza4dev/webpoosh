@@ -258,7 +258,7 @@
   .accordion-btn {
   }
 
-  .accordion-btn * {
+  .accordion-btn i {
     @apply transition-all duration-300;
   }
 
@@ -474,11 +474,15 @@
 
   .product-content {
     .product-title {
-      @apply inline-block text-gray-900 text-2xs font-bold mt-3 mb-1.5;
+      @apply block text-gray-900 text-2xs font-bold mt-3 mb-1.5;
     }
 
     .product-price {
-      @apply text-gray-900 leading-4;
+      @apply inline-block text-gray-900 leading-4;
+
+      &.discount {
+        @apply text-xs text-red-500 line-through;
+      }
     }
 
     .product-colors {

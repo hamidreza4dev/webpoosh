@@ -345,3 +345,35 @@ allInputs.forEach(item => {
     });
   }
 });
+
+// order page > modal > add input area
+const orderInput = document.getElementById('orderInput');
+if (orderInput) {
+  const addOrderInput = document.getElementById('addOrderInput');
+  addOrderInput.addEventListener('click', () => {
+    const htmlInput = `
+    <div class="flex gap-4">
+      <label class="block">
+        <span class="input--label">کد رهگیری</span>
+        <input type="text" class="form-input mt-1 block w-full">
+      </label>
+
+      <label class="block">
+        <span class="input--label">مبلغ</span>
+        <input type="number" class="form-input mt-1 block w-full">
+      </label>
+
+      <button type="button" class="btn btn--sm btn--primary !bg-red-600 !ring-red-200 h-[2.6rem] mt-auto remove-input"><i class="fa fa-minus pointer-events-none"></i></button>
+    </div>`;
+
+    orderInput.insertAdjacentHTML('beforeend', htmlInput);
+  });
+
+  orderInput.addEventListener('click', e => {
+    if (!e.target.classList.contains('remove-input')) {
+      return false;
+    }
+
+    e.target.parentElement.remove();
+  });
+}

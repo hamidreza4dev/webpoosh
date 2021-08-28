@@ -575,14 +575,110 @@
       </div>
     </div>
 
-    <div class="w-4/5 md:w-full p-20 lg:p-4 md:max-w-[100vw] md:overflow-x-scroll space-y-4">
-      <h1 class="text-xl">سلام <span>محمدرضا</span> عزیز</h1>
-      <p>
-        در صفحه حساب کاربری خود شما میتوانید <a href="profile-order.html" class="text-blue-500">سفارشات</a> و <a href="profile-size.html" class="text-blue-500">سایز لباس</a> های خود را مشاهده کنید.
-      </p>
-      <p>
-        همچنین میتوانید  <a href="profile-address.html" class="text-blue-500">آدرس های خود</a> را مدیریت کرده و <a href="profile-reset-password.html" class="text-blue-500">رمز عبور</a> را تکمیل یا ویرایش کنید.
-      </p>
+    <div class="w-4/5 md:w-full p-20 lg:p-4 space-y-4">
+      <div>
+        <button class="btn--icon justify-between accordion-btn btn btn--md w-full !p-0">
+          پروفایل
+          <span class="hover:text-white hover:bg-gray-900 border-solid border-2 border-gray-900 py-4 px-6"><i class="fa fa-angle-down"></i></span>
+        </button>
+        <div class="acc-panel transition-all">
+          <div class="py-2 text-justify">
+            <form action="">
+              <div class="grid grid-cols-2 gap-4 gap-y-8 md:grid-cols-1">
+                <label class="block">
+                  <span class="input--label">نام</span>
+                  <input type="text" class="form-input mt-1 block w-full" placeholder="" value="محمدرضا">
+                </label>
+
+                <label class="block">
+                  <span class="input--label">نام خوانوادگی</span>
+                  <input type="text" class="form-input mt-1 block w-full" placeholder="" value=".........">
+                </label>
+
+                <label class="block">
+                  <span class="input--label">شماره موبایل</span>
+                  <input type="number" class="form-input mt-1 block w-full" placeholder="09213456789">
+                </label>
+
+                <label class="block">
+                  <span class="input--label">آدرس ایمیل</span>
+                  <input type="email" class="form-input mt-1 block w-full" placeholder="example@gmail.com">
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn--md btn--primary mr-auto mt-4 block">ذخیره اطلاعات</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn--icon justify-between accordion-btn btn btn--md w-full !p-0">
+          ثبت اطلاعات بانکی
+          <span class="hover:text-white hover:bg-gray-900 border-solid border-2 border-gray-900 py-4 px-6"><i class="fa fa-angle-down"></i></span>
+        </button>
+        <div class="acc-panel transition-all">
+          <div class="py-2 text-justify">
+            <form action="">
+              <div class="grid grid-cols-2 gap-4 gap-y-8 md:grid-cols-1">
+                <label class="block">
+                  <span class="input--label">نام صاحب حساب</span>
+                  <input type="text" class="form-input mt-1 block w-full" placeholder="" value="محمدرضا">
+                </label>
+
+                <label class="block">
+                  <span class="input--label">اسم بانک</span>
+                  <select name="" class="form-input mt-1 block w-full">
+                    <option value="بانک ملی">بانک ملی</option>
+                    <option value="بانک صنعت و معدن">بانک صنعت و معدن</option>
+                    <option value="بانک کشاورزی">بانک کشاورزی</option>
+                    <option value="بانک مسکن">بانک مسکن</option>
+                    <option value="بانک توسعه صادرات ایران">بانک توسعه صادرات ایران</option>
+                    <option value="بانک توسعه تعاون">بانک توسعه تعاون</option>
+                    <option value="بانک اقتصاد نوین">بانک اقتصاد نوین</option>
+                    <option value="بانک پارسیان">بانک پارسیان</option>
+                    <option value="بانک کارآفرین">بانک کارآفرین</option>
+                    <option value="بانک سامان">بانک سامان</option>
+                    <option value="بانک سینا">بانک سینا</option>
+                    <option value="بانک شهر">بانک شهر</option>
+                    <option value="بانک دی">بانک دی</option>
+                    <option value="بانک صادرات">بانک صادرات</option>
+                    <option value="بانک ملت">بانک ملت</option>
+                    <option value="بانک تجارت">بانک تجارت</option>
+                    <option value="بانک رفاه">بانک رفاه</option>
+                    <option value="بانک قوامین">بانک قوامین</option>
+                    <option value="بانک انصار">بانک انصار</option>
+                    <option value="بانک سرمایه">بانک سرمایه</option>
+                    <option value="بانک پاسارگاد">بانک پاسارگاد</option>
+                    <option value="پست بانک ایران">پست بانک ایران</option>
+                    <option value="بانک خاور میانه">بانک خاور میانه</option>
+                  </select>
+                </label>
+
+                <label class="block">
+                  <span class="input--label">شماره موبایل</span>
+                  <div class="flex gap-2 flex-row-reverse">
+                    <input type="text" pattern="[0-9]+" placeholder="xxxx" required data-err="لطفا این فیلد را با اعداد انگلیسی پر کنید" class="form-input text-center block w-full" maxlength="4" oninput="(this.value.length == 4) ? this.nextElementSibling.focus() : null">
+                    <input type="text" pattern="[0-9]+" placeholder="xxxx" required data-err="لطفا این فیلد را با اعداد انگلیسی پر کنید" class="form-input text-center block w-full" maxlength="4" oninput="(this.value.length == 4) ? this.nextElementSibling.focus() : null">
+                    <input type="text" pattern="[0-9]+" placeholder="xxxx" required data-err="لطفا این فیلد را با اعداد انگلیسی پر کنید" class="form-input text-center block w-full" maxlength="4" oninput="(this.value.length == 4) ? this.nextElementSibling.focus() : null">
+                    <input type="text" pattern="[0-9]+" placeholder="xxxx" required data-err="لطفا این فیلد را با اعداد انگلیسی پر کنید" class="form-input text-center block w-full" maxlength="4">
+                  </div>
+                </label>
+
+                <label class="block">
+                  <span class="input--label">شماره شبا</span>
+                  <div class="flex items-center gap-4">
+                    <input type="email" class="form-input block w-full">
+                    <span class="text-xl" style="direction: ltr">_IR</span>
+                  </div>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn--md btn--primary mr-auto mt-4 block">ذخیره اطلاعات</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
