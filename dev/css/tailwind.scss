@@ -471,6 +471,13 @@
         @apply opacity-100;
       }
     }
+
+    @screen md {
+      .product-sizes span,
+      .product-colors {
+        @apply !opacity-100;
+      }
+    }
   }
 
   .product-content {
