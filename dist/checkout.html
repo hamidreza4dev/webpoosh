@@ -891,7 +891,7 @@
 
     accordionStep.forEach(item => {
       item.firstElementChild.addEventListener('click', () => {
-        item.classList.toggle('active');
+        item.firstElementChild.classList.toggle('active');
         const panel = item.firstElementChild.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
